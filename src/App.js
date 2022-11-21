@@ -7,6 +7,7 @@ import Results from "./components/Results";
 
 function App() {
   const [moodText, setMoodText] = useState("");
+  console.log(moodText)
 
 
   return (

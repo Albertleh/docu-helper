@@ -6,6 +6,7 @@ import neutral from "../../assets/neutral.png";
 import sad from "../../assets/sad.png";
 import verysad from "../../assets/very-sad.png";
 import { moodTextContext } from "../../Helpers/Context";
+import ButtonElement from "./ButtonElement";
 
 const veryhappytext = [
   "Hr. Musterklient kam heute sehr zufrieden in die Tagesstätte.",
@@ -20,16 +21,24 @@ const verysadtext = ["verysad1", "verysad2", "verysad3"];
 const Happiness = () => {
   const { moodText, setMoodText } = useContext(moodTextContext);
 
-  const selectMoodHandler = (event) => {
-    if (event.target.alt === "very-happy") {
+  const ACTION = {
+    EXZELLENT: "Exzellent",
+    GUT: "Gut",
+    NEUTRAL: "Neutral",
+    SCHLECHT: "Schlecht",
+    MISERABEL: "Miserabel",
+  }
+
+  const selectMoodHandler = (text) => {
+    if (text === ACTION.EXZELLENT) {
       setMoodText(
         veryhappytext[Math.floor(Math.random() * veryhappytext.length)]
       );
-    } else if (event.target.alt === "happy") {
+    } else if (text === ACTION.GUT) {
       setMoodText(happytext[Math.floor(Math.random() * happytext.length)]);
-    } else if (event.target.alt === "neutral") {
+    } else if (text === ACTION.NEUTRAL) {
       setMoodText(neutraltext[Math.floor(Math.random() * neutraltext.length)]);
-    } else if (event.target.alt === "sad") {
+    } else if (text === ACTION.SCHLECHT) {
       setMoodText(sadtext[Math.floor(Math.random() * sadtext.length)]);
     } else {
       setMoodText(verysadtext[Math.floor(Math.random() * verysadtext.length)]);
@@ -42,46 +51,11 @@ const Happiness = () => {
         Zufriedenheit
       </div>
       <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-        <button class="button">
-          <img
-            onClick={selectMoodHandler}
-            class="mood-image"
-            src={veryhappy}
-            alt="very-happy"
-          ></img>
-        </button>
-        <button class="button">
-          <img
-            onClick={selectMoodHandler}
-            class="mood-image"
-            src={happy}
-            alt="happy"
-          ></img>
-        </button>
-        <button class="button">
-          <img
-            onClick={selectMoodHandler}
-            class="mood-image"
-            src={neutral}
-            alt="neutral"
-          ></img>
-        </button>
-        <button class="button">
-          <img
-            onClick={selectMoodHandler}
-            class="mood-image"
-            src={sad}
-            alt="sad"
-          ></img>
-        </button>
-        <button class="button">
-          <img
-            onClick={selectMoodHandler}
-            class="mood-image"
-            src={verysad}
-            alt="very-sad"
-          ></img>
-        </button>
+        <ButtonElement icon={veryhappy} text={ACTION.EXZELLENT} onSelect={selectMoodHandler} />
+        <ButtonElement icon={happy} text={ACTION.GUT} onSelect={selectMoodHandler} />
+        <ButtonElement icon={neutral} text={ACTION.NEUTRAL} onSelect={selectMoodHandler} />
+        <ButtonElement icon={sad} text={ACTION.SCHLECHT} onSelect={selectMoodHandler} />
+        <ButtonElement icon={verysad} text={ACTION.MISERABEL} onSelect={selectMoodHandler} />
       </div>
     </React.Fragment>
   );

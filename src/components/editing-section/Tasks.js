@@ -9,6 +9,7 @@ import relaxed from "../../assets/mood-relaxed.png";
 import angry from "../../assets/mood-angry.png";
 
 import { moodTextContext } from "../../Helpers/Context";
+import ButtonElement from "./ButtonElement";
 
 const veryhappytext = [
   "Hr. Musterklient kam heute sehr zufrieden in die Tagesstätte.",
@@ -45,60 +46,12 @@ const Tasks = () => {
         Aufgaben
       </div>
       <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-        <button class="button">
-          <img
-            onClick={selectMoodHandler}
-            class="mood-image"
-            src={annoyed}
-            alt="very-happy"
-          ></img>
-          <h3 className="text-white text-lg">genervt</h3>
-        </button>
-        <button class="button">
-          <img
-            onClick={selectMoodHandler}
-            class="mood-image"
-            src={sad}
-            alt="happy"
-          ></img>
-          <h3 className="text-white text-lg">traurig</h3>
-        </button>
-        <button class="button">
-          <img
-            onClick={selectMoodHandler}
-            class="mood-image"
-            src={confirmation}
-            alt="neutral"
-          ></img>
-          <h3 className="text-white text-lg">sucht Bestätigung</h3>
-        </button>
-        <button class="button">
-          <img
-            onClick={selectMoodHandler}
-            class="mood-image"
-            src={angry}
-            alt="sad"
-          ></img>
-          <h3 className="text-white text-lg">sauer</h3>
-        </button>
-        <button class="button">
-          <img
-            onClick={selectMoodHandler}
-            class="mood-image"
-            src={sleepy}
-            alt="very-sad"
-          ></img>
-          <h3 className="text-white text-lg">schläfrig</h3>
-        </button>
-        <button class="button">
-          <img
-            onClick={selectMoodHandler}
-            class="mood-image"
-            src={relaxed}
-            alt="very-sad"
-          ></img>
-          <h3 className="text-white text-lg">relaxed</h3>
-        </button>
+        <ButtonElement icon={undefined} text='Kaffee gemacht' />
+        <ButtonElement icon={undefined} text='Müll rausgetragen' />
+        <ButtonElement icon={undefined} text='Aufgeräumt' />
+        <ButtonElement icon={undefined} text='Gruppengeschehen teilgenommen' />
+        <ButtonElement icon={undefined} text='Botengänge erledigt' />
+        <ButtonElement icon={undefined} text='Jausenbox runtergetragen' />
       </div>
     </React.Fragment>
   );

@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9c6735cc.css",
+    "main.js": "/static/js/main.0ffd5a59.js",
+    "static/js/787.b3c02f73.chunk.js": "/static/js/787.b3c02f73.chunk.js",
+    "static/media/sad.png": "/static/media/sad.821cf21437efb04d4734.png",
+    "static/media/happy.png": "/static/media/happy.1016fef8750efa0288bb.png",
+    "static/media/very-sad.png": "/static/media/very-sad.a0edd3332c373b329a05.png",
+    "static/media/very-happy.png": "/static/media/very-happy.0eeba4f6ade12f389251.png",
+    "static/media/neutral.png": "/static/media/neutral.eef497343ee5ae2abb94.png",
+    "static/media/mood-relaxed.png": "/static/media/mood-relaxed.7c7f0b5cf19581d42d5f.png",
+    "static/media/mood-sad.png": "/static/media/mood-sad.52bfe6e8a990ae63c689.png",
+    "static/media/mood-angry.png": "/static/media/mood-angry.e76247832201c547f1c2.png",
+    "static/media/mood-worried.png": "/static/media/mood-worried.8f68019bac23c923676f.png",
+    "static/media/mood-sleepy.png": "/static/media/mood-sleepy.13ddc28a83b1ea0bbf1d.png",
+    "static/media/mood-annoyed.png": "/static/media/mood-annoyed.fab0b8deca81d312b82d.png",
+    "static/media/mood-confirmation.png": "/static/media/mood-confirmation.cd2e5147ae465b388dc7.png",
+    "index.html": "/index.html",
+    "main.9c6735cc.css.map": "/static/css/main.9c6735cc.css.map",
+    "main.0ffd5a59.js.map": "/static/js/main.0ffd5a59.js.map",
+    "787.b3c02f73.chunk.js.map": "/static/js/787.b3c02f73.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c6735cc.css",
+    "static/js/main.0ffd5a59.js"
+  ]
+}
