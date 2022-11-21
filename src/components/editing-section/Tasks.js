@@ -68,7 +68,7 @@ const Tasks = () => {
 
   return (
     <React.Fragment>
-      <div className=" mt-10 mood-text text-slate-100 font-bold text-3xl">
+      <div className="mood-text text-slate-100 font-bold text-2xl">
         Aufgaben
       </div>
       <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
