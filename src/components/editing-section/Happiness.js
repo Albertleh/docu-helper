@@ -27,7 +27,7 @@ const Happiness = () => {
     NEUTRAL: "Neutral",
     SCHLECHT: "Schlecht",
     MISERABEL: "Miserabel",
-  }
+  };
 
   const selectMoodHandler = (text) => {
     if (text === ACTION.EXZELLENT) {
@@ -47,15 +47,35 @@ const Happiness = () => {
 
   return (
     <React.Fragment>
-      <div className="mood-text text-slate-100 font bold text-3xl underline">
+      <div className="mood-text text-slate-100 font-bold text-3xl">
         Zufriedenheit
       </div>
       <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-        <ButtonElement icon={veryhappy} text={ACTION.EXZELLENT} onSelect={selectMoodHandler} />
-        <ButtonElement icon={happy} text={ACTION.GUT} onSelect={selectMoodHandler} />
-        <ButtonElement icon={neutral} text={ACTION.NEUTRAL} onSelect={selectMoodHandler} />
-        <ButtonElement icon={sad} text={ACTION.SCHLECHT} onSelect={selectMoodHandler} />
-        <ButtonElement icon={verysad} text={ACTION.MISERABEL} onSelect={selectMoodHandler} />
+        <ButtonElement
+          icon={veryhappy}
+          text={ACTION.EXZELLENT}
+          onSelect={selectMoodHandler}
+        />
+        <ButtonElement
+          icon={happy}
+          text={ACTION.GUT}
+          onSelect={selectMoodHandler}
+        />
+        <ButtonElement
+          icon={neutral}
+          text={ACTION.NEUTRAL}
+          onSelect={selectMoodHandler}
+        />
+        <ButtonElement
+          icon={sad}
+          text={ACTION.SCHLECHT}
+          onSelect={selectMoodHandler}
+        />
+        <ButtonElement
+          icon={verysad}
+          text={ACTION.MISERABEL}
+          onSelect={selectMoodHandler}
+        />
       </div>
     </React.Fragment>
   );

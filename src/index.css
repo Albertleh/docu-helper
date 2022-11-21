@@ -17,11 +17,11 @@ body {
   }
 
   .mood-image {
-    @apply mx-auto mb-2 w-20 h-20 rounded-full bg-white p-2 hover:brightness-50 focus:brightness-50;
+    @apply mx-auto mb-2 w-16 h-16 rounded-full bg-white p-2 hover:brightness-50 focus:brightness-50;
   }
 
   .mood-text {
-    @apply mb-1 text-lg font-bold tracking-tight text-gray-100 dark:text-white;
+    @apply mb-1 text-lg font-normal tracking-tight text-gray-100 dark:text-white;
   }
 }
 

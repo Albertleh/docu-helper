@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { moodTextContext } from "../Helpers/Context";
 
 const Results = (props) => {
 
-  const CopyClipboardHandler = () =>{
+  const {moodText, setMoodText} = useContext(moodTextContext);
+
+  const CopyClipboardHandler = () => {
     navigator.clipboard.writeText(props.text);
+  };
+
+  const ClearTextHandler = () => {
+    setMoodText('');
   };
 
   return (
@@ -13,6 +20,9 @@ const Results = (props) => {
       </div>
       <button onClick={CopyClipboardHandler} className="drop-shadow-lg bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring focus:ring-gray-500 text-lg text-white font-bold ml-10 mt-5 mb-1 rounded-2xl py-2 px-7">
         In Zwischenablage kopieren
+      </button>
+      <button onClick={ClearTextHandler} className="drop-shadow-lg bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring focus:ring-gray-500 text-lg text-white font-bold ml-10 mt-5 mb-1 rounded-2xl py-2 px-7">
+        Textfeld zurücksetzen
       </button>
     </div>
   );
