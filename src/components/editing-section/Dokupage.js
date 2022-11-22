@@ -7,8 +7,8 @@ import Tasks from "./Tasks";
 
 const Dokupage = () => {
   return (
-    <div className="drop-shadow-xl z-20 pb-3 px-6 flex flex-col justify-left items-left bg-gray-800 rounded-3xl container mx-auto max-w-9xl">
-      <NameInput />
+    <div className="drop-shadow-xl z-20 pb-3 px-6 flex flex-col justify-center sm:items-start bg-gray-800 rounded-3xl container mx-auto max-w-9xl">
+        <NameInput />
       <div className="card-inner">
         <Happiness />
       </div>

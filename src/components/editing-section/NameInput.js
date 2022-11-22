@@ -26,16 +26,16 @@ const NameInput = () => {
   }
 
   return (
-    <span className="mb-3 ml-5 text-lg text-white ">
-      Name des Klienten:
-      <input ref={inputref} type="text" className="py-1 px-2 ml-5 rounded-lg text-gray-900" />
+    <div className="pt-5 sm:pt-4 sm:mb-3 sm:ml-5 text-2xl sm:text-lg text-white flex flex-col sm:flex-row sm:justify-center items-center sm:items-center  ">
+      <span className="mb-5 sm:mb-0">Name des Klienten:</span>
+      <input ref={inputref} type="text" className="py-1 px-2 mb-5 sm:mb-0 sm:ml-5 rounded-lg text-gray-900" />
       <button
         onClick={NameConfirmHandler}
-        className={"button2" + validstyles}
+        className={"button2" + validstyles }
       >
         Name bestätigen
       </button>
-    </span>
+    </div>
   );
 };
 

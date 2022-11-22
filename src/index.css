@@ -17,7 +17,7 @@ body {
   }
 
   .button2 {
-    @apply drop-shadow-lg bg-gray-900 hover:bg-gray-600 focus:outline-none focus:ring focus:ring-gray-500 text-lg text-white font-bold ml-10 mt-5 mb-1 rounded-2xl py-2 px-7;
+    @apply drop-shadow-lg bg-gray-900 hover:bg-gray-600 focus:outline-none focus:ring focus:ring-gray-500 text-lg text-white font-bold my-2 sm:ml-10 sm:mt-2 sm:mb-1 rounded-2xl py-2 px-7;
   }
 
   .mood-image {

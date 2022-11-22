@@ -26,7 +26,7 @@ const Results = (props) => {
 
   return (
     <div className="drop-shadow-lg z-20 py-3 px-6 mt-5 bg-gray-800 rounded-3xl container mx-auto max-w-9xl">
-      <div className="drop-shadow-lg text-white mt-1 text-lg drop-shadow-xl z-20 py-3 px-6 bg-gray-700 rounded-2xl container mx-auto max-w-9xl">
+      <div className="drop-shadow-lg text-white mt-1 mb-3 text-lg drop-shadow-xl z-20 py-3 px-6 bg-gray-700 rounded-2xl container mx-auto max-w-9xl">
         {props.text}
       </div>
       <button onClick={CopyClipboardHandler} className={"button2 ml-0" + disabledstyles} disabled={disablebutton}>
