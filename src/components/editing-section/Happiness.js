@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { nameContext } from "../../Helpers/Context";
 
 import veryhappy from "../../assets/very-happy.png";
 import happy from "../../assets/happy.png";
@@ -8,18 +9,22 @@ import verysad from "../../assets/very-sad.png";
 import { moodTextContext } from "../../Helpers/Context";
 import ButtonElement from "./ButtonElement";
 
-const veryhappytext = [
-  "Hr. Musterklient kam heute sehr zufrieden in die Tagesstätte.",
-  "Hr. Musterklient ging heute mit einem Lächeln in die Tagesstätte und wirkte sehr zufrieden",
-  "Hr. Musterklient war heute sehr gut aufgelegt und grüßte freundlich beim Betreten der Tagesstätte",
-];
-const happytext = ["happy1", "happy2", "happy3"];
-const neutraltext = ["neutral1", "neutral2", "neutral3"];
-const sadtext = ["sad1", "sad2", "sad3"];
-const verysadtext = ["verysad1", "verysad2", "verysad3"];
-
 const Happiness = () => {
-  const { moodText, setMoodText } = useContext(moodTextContext);
+
+  const { name } = useContext(nameContext);
+
+  const veryhappytext = [
+      `${name} kam heute sehr zufrieden in die Tagesstätte.`,
+    "Hr. Musterklient ging heute mit einem Lächeln in die Tagesstätte und wirkte sehr zufrieden",
+    "Hr. Musterklient war heute sehr gut aufgelegt und grüßte freundlich beim Betreten der Tagesstätte",
+  ];
+  const happytext = ["happy1", "happy2", "happy3"];
+  const neutraltext = ["neutral1", "neutral2", "neutral3"];
+  const sadtext = ["sad1", "sad2", "sad3"];
+  const verysadtext = ["verysad1", "verysad2", "verysad3"];
+
+
+  const { setMoodText } = useContext(moodTextContext);
 
   const ACTION = {
     EXZELLENT: "Exzellent",

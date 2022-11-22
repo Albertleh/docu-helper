@@ -8,16 +8,16 @@ import Tasks from "./Tasks";
 const Dokupage = () => {
   return (
     <div className="drop-shadow-xl z-20 py-3 px-6 flex flex-col justify-center items-center bg-gray-800 rounded-3xl container mx-auto max-w-5xl">
-      <div className="drop-shadow-lg text-white mt-1 mb-5 text-lg drop-shadow-xl z-20 py-3 px-6 bg-gray-700 rounded-2xl container mx-auto max-w-5xl">
+      <div className="card-inner">
         <NameInput />
       </div>
-      <div className="drop-shadow-lg text-white mt-1 mb-5 text-lg drop-shadow-xl z-20 py-3 px-6 bg-gray-700 rounded-2xl container mx-auto max-w-5xl">
+      <div className="card-inner">
         <Happiness />
       </div>
-      <div className="drop-shadow-lg text-white mt-1 mb-5 text-lg drop-shadow-xl z-20 py-3 px-6 bg-gray-700 rounded-2xl container mx-auto max-w-5xl">
+      <div className="card-inner">
         <Mood />
       </div>
-      <div className="drop-shadow-lg text-white mt-1 mb-3 text-lg drop-shadow-xl z-20 py-3 px-6 bg-gray-700 rounded-2xl container mx-auto max-w-5xl">
+      <div className="card-inner">
         <Tasks />
       </div>
     </div>
