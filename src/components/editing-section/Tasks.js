@@ -8,7 +8,7 @@ import React, { useContext } from "react";
 // import relaxed from "../../assets/mood-relaxed.png";
 // import angry from "../../assets/mood-angry.png";
 
-import { moodTextContext } from "../../Helpers/Context";
+import { moodTextContext, nameContext } from "../../Helpers/Context";
 import ButtonElement from "./ButtonElement";
 
 const makingcoffeetext = ["makingcoffee1", "makingcoffee2", "makingcoffee3"];
@@ -20,6 +20,15 @@ const carryluchboxtext = ["carryluchbox1", "carryluchbox2", "carryluchbox3"];
 
 const Tasks = () => {
   const { moodText, setMoodText } = useContext(moodTextContext);
+  const { name } = useContext(nameContext);
+
+  let disablebutton = true;
+  if ( name.length == 0 ) {
+    disablebutton = true;
+  } else if ( name.length > 0 ) {
+    disablebutton = false;
+  }
+
 
   const ACTION = {
     KAFFEE_GEMACHT: "Kaffee gemacht",
@@ -75,31 +84,37 @@ const Tasks = () => {
         <ButtonElement
           icon={undefined}
           text={ACTION.KAFFEE_GEMACHT}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={undefined}
           text={ACTION.MUELL_RAUSGETRAGEN}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={undefined}
           text={ACTION.HAT_AUFGERAEUMT}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={undefined}
           text={ACTION.GRUPPENGESCHEHEN_TEILGENOMMEN}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={undefined}
           text={ACTION.BOTENGAENGE_ERLEDIGT}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={undefined}
           text={ACTION.JAUSENBOX_RUNTERGETRAGEN}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
       </div>

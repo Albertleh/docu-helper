@@ -4,7 +4,7 @@ import { nameContext } from "../../Helpers/Context";
 const NameInput = () => {
 
   const inputref = useRef(null);
-  const {setName} = useContext(nameContext);
+  const { setName } = useContext(nameContext);
   const [nameValid, setNameValid] = useState(undefined);
 
   const NameConfirmHandler = () => {
