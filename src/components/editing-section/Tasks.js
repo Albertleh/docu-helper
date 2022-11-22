@@ -17,10 +17,10 @@ const Tasks = () => {
 
   const makingcoffeetext = [`Bezüglich Tätigkeiten hat ${name} heute die Aufgabe des Kaffeekochens angenommen und auch erfüllt. `];
   const takingouttrashtext = [`Ebenfalls wurde der Müll heute von ${name} selbstständig zum Müllplatz getragen und dort entsorgt. `];
-  const cleaningtext = [`${name}`];
-  const participatingtext = [``];
-  const carrytext = [``];
-  const carryluchboxtext = [``];
+  const cleaningtext = [`${name} war heute sehr um die Sauberkeit der Gruppe bemüht und nahm selbstbestimmt diverse Reinungstätigkeiten an. `];
+  const participatingtext = [`Außerdem ist zu betonen, dass ${name} heute sich aktiv in das Gruppengeschehen eingebracht hat und sehr proaktiv agierte. `];
+  const carrytext = [`Ebenfalls erledigte ${name} am Vormittag diverse Botengänge in die Küche. `];
+  const carryluchboxtext = [`${name} hat heute Früh ordnungsgemäß die leere Jausenbox zurück in die Küche gebracht. `];
   const basalstimulationtext = [``];
 
   let disablebutton = true;
