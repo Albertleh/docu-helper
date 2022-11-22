@@ -15,9 +15,11 @@ function App() {
   return (
     <nameContext.Provider value={{ name, setName }}>
       <moodTextContext.Provider value={{ moodText, setMoodText }}>
-        <div className="bg-slate-900 h-screen p-5">
-          <Dokupage />
-          <Results text={moodText} />
+        <div className="bg-slate-900 h-screen">
+          <div className="bg-slate-900 h-auto p-5">
+            <Dokupage />
+            <Results text={moodText} />
+          </div>
         </div>
       </moodTextContext.Provider>
     </nameContext.Provider>

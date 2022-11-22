@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 
-// import annoyed from "../../assets/mood-annoyed.png";
-// import confirmation from "../../assets/mood-confirmation.png";
-// import sad from "../../assets/mood-sad.png";
-// import sleepy from "../../assets/mood-sleepy.png";
-// import worried from "../../assets/mood-worried.png";
-// import relaxed from "../../assets/mood-relaxed.png";
-// import angry from "../../assets/mood-angry.png";
+import broom from "../../assets/broom.png";
+import caress from "../../assets/caress.png";
+import hand from "../../assets/hand.png";
+import kaffee from "../../assets/kaffee.png";
+import recyclebin from "../../assets/recycle-bin.png";
+import walk from "../../assets/walk.png";
+import tupperware from "../../assets/tupperware.png";
 
 import { moodTextContext, nameContext } from "../../Helpers/Context";
 import ButtonElement from "./ButtonElement";
@@ -21,7 +21,7 @@ const Tasks = () => {
   const participatingtext = [`Außerdem ist zu betonen, dass ${name} heute sich aktiv in das Gruppengeschehen eingebracht hat und sehr proaktiv agierte. `];
   const carrytext = [`Ebenfalls erledigte ${name} am Vormittag diverse Botengänge in die Küche. `];
   const carryluchboxtext = [`${name} hat heute Früh ordnungsgemäß die leere Jausenbox zurück in die Küche gebracht. `];
-  const basalstimulationtext = [``];
+  const basalstimulationtext = [`${name} bekam heute basale Stimulation zur Beruhigung. Dies zeigte Wirkung und verhalf zur Entspannung. `];
 
   let disablebutton = true;
   if ( name.length == 0 ) {
@@ -83,48 +83,48 @@ const Tasks = () => {
 
   return (
     <React.Fragment>
-      <div className="mood-text text-slate-100 font-bold text-2xl">
+      <div className="mood-text text-slate-300 font-bold text-2xl">
         Aufgaben
       </div>
       <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
         <ButtonElement
-          icon={undefined}
+          icon={kaffee}
           text={ACTION.KAFFEE_GEMACHT}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={undefined}
+          icon={recyclebin}
           text={ACTION.MUELL_RAUSGETRAGEN}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={undefined}
+          icon={broom}
           text={ACTION.HAT_AUFGERAEUMT}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={undefined}
+          icon={hand}
           text={ACTION.GRUPPENGESCHEHEN_TEILGENOMMEN}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={undefined}
+          icon={walk}
           text={ACTION.BOTENGAENGE_ERLEDIGT}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={undefined}
+          icon={tupperware}
           text={ACTION.JAUSENBOX_RUNTERGETRAGEN}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={undefined}
+          icon={caress}
           text={ACTION.BASALE_STIMULATION}
           disable={disablebutton}
           onSelect={selectMoodHandler}

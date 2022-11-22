@@ -29,7 +29,7 @@ body {
   }
 
   .card-inner {
-    @apply drop-shadow-lg text-white mt-1 mb-5 text-lg drop-shadow-xl z-20 py-2 px-6 bg-gray-700 rounded-2xl container mx-auto max-w-5xl;
+    @apply drop-shadow-lg text-white mt-1 mb-5 text-lg drop-shadow-xl z-20 pt-3 px-6 bg-gray-700 rounded-2xl container mx-auto max-w-7xl;
   }
 }
 

@@ -19,12 +19,12 @@ const Mood = () => {
   const { name } = useContext(nameContext);
 
   const annoyedtext = [`Außerdem wirkte ${name} während des Vormittags über genervt und auch ein bisschen missverstanden. `];
-  const confirmationtext = [`Ebenfalls suchte ${name} zunehmend Bestätigung von dem Betreuerteam und stellt sich selbst in Frage. `];
+  const confirmationtext = [`Ebenfalls suchte ${name} zunehmend Bestätigung von dem Betreuerteam und stellt sich öfters selbst in Frage. `];
   const sadtext = [`Außerdem wirkte ${name} während den frühen Stunden ein wenig traurig, was auf die isolierende Gestikulierung zurückzuführen war. `];
   const sleepytext = [`Zudem schien es so als hätte ${name} nicht gut oder ausreichen  geschlafen, da die Gestikulierung (insbesodere durch Gähnen) auf Müdigkeit hinwies. `];
   const worriedtext = [`Abgesehen davon wirkte ${name} die ganze Zeit über ein wenig betrübt und gestikulierte sich besorgt. `];
   const relaxedtext = [`Ebenfalls zu erwähnen ist, dass sich ${name} heute sehr ruhig verhielt und die Zeit über in einem allgemein entspannten Zustand verweilt. `];
-  const angrytext = [`${name}'s Unwohlsein und Zorn war heute nicht zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken befeuert wurde. `];
+  const angrytext = [`${name}'s Aggression gegenüber anderen Klienten war heute kaum zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken und Handgriffe befeuert wurde. `];
 
   let disablebutton = true;
   if ( name.length == 0 ) {
@@ -38,7 +38,7 @@ const Mood = () => {
     SUCHT_BESTAETIGUNG: "sucht Bestätigung",
     TRAURIG: "traurig",
     BESORGT: "besorgt",
-    SAUER: "sauer",
+    SAUER: "fremd- aggressiv",
     SCHLAEFRIG: "schläfrig",
     ENTSPANNT: "entspannt",
   };
@@ -54,22 +54,22 @@ const Mood = () => {
         moodText +
         confirmationtext[Math.floor(Math.random() * confirmationtext.length)],
       ]);
-    } else if (text === ACTION.NEUTRAL) {
+    } else if (text === ACTION.TRAURIG) {
       setMoodText([
         moodText +
         sadtext[Math.floor(Math.random() * sadtext.length)],
       ]);
-    } else if (text === ACTION.NEUTRAL) {
+    } else if (text === ACTION.ENTSPANNT) {
       setMoodText([
         moodText +
         relaxedtext[Math.floor(Math.random() * relaxedtext.length)],
       ]);
-    } else if (text === ACTION.NEUTRAL) {
+    } else if (text === ACTION.SAUER) {
       setMoodText([
         moodText +
         angrytext[Math.floor(Math.random() * angrytext.length)],
       ]);
-    } else if (text === ACTION.SCHLECHT) {
+    } else if (text === ACTION.SCHLAEFRIG) {
       setMoodText([
         moodText +
         sleepytext[Math.floor(Math.random() * sleepytext.length)],
@@ -83,7 +83,7 @@ const Mood = () => {
   };
   return (
     <React.Fragment>
-      <div className=" mood-text text-slate-100 font-bold text-2xl">
+      <div className=" mood-text text-slate-300 font-bold text-2xl">
         Stimmungen
       </div>
       <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
