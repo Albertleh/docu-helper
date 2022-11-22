@@ -6,10 +6,15 @@ const ButtonElement = (props) => {
     console.log('was clicked')
   }
 
+  let disabledStyles = '';
+  if ( props.disable === true ) {
+    disabledStyles = ' brightness-50'
+  } 
+
   return (
-    <button class="button" onClick={ClickHelper}>
-      <img class="mood-image" src={props.icon} alt="Icon"></img>
-      <h3 class="mood-text">
+    <button class="button" onClick={ClickHelper} disabled={props.disable}>
+      <img class={"mood-image" + disabledStyles} src={props.icon} alt="Icon" disabled={props.disable} />
+      <h3 class={"mood-text" + disabledStyles} disabled={props.disable}>
         <a href="#">{props.text} </a>
       </h3>
     </button>

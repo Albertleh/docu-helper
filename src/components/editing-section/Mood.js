@@ -9,6 +9,7 @@ import relaxed from "../../assets/mood-relaxed.png";
 import angry from "../../assets/mood-angry.png";
 
 import { moodTextContext } from "../../Helpers/Context";
+import { nameContext } from "../../Helpers/Context";
 import ButtonElement from "./ButtonElement";
 
 const annoyedtext = ["annoyed1", "annoyed2", "annoyed3"];
@@ -21,6 +22,14 @@ const angrytext = ["angry1", "angry2", "angry3"];
 
 const Mood = () => {
   const { moodText, setMoodText } = useContext(moodTextContext);
+  const { name } = useContext(nameContext);
+
+  let disablebutton = true;
+  if ( name.length == 0 ) {
+    disablebutton = true;
+  } else if ( name.length > 0 ) {
+    disablebutton = false;
+  }
 
   const ACTION = {
     GENERVT: "genervt",
@@ -79,36 +88,43 @@ const Mood = () => {
         <ButtonElement
           icon={annoyed}
           text={ACTION.GENERVT}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={sad}
           text={ACTION.TRAURIG}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={confirmation}
+          disable={disablebutton}
           text={ACTION.SUCHT_BESTAETIGUNG}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={angry}
           text={ACTION.SAUER}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={worried}
           text={ACTION.ENTSPANNT}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={sleepy}
           text={ACTION.SCHLAEFRIG}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={relaxed}
           text={ACTION.ENTSPANNT}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
       </div>

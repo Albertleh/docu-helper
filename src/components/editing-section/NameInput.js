@@ -1,15 +1,30 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { nameContext } from "../../Helpers/Context";
 
 const NameInput = () => {
 
   const inputref = useRef(null);
   const {setName} = useContext(nameContext);
+  const [nameValid, setNameValid] = useState(undefined);
 
   const NameConfirmHandler = () => {
-    setName(inputref.current.value);
-    inputref.current.value = null;
+    if (inputref.current.value == '') {
+      setNameValid(false);
+      validstyles = ' focus:ring-red-500 text-red-500'
+    } else {
+      setName(inputref.current.value);
+      inputref.current.value = null;
+      setNameValid(true);
+      validstyles = ' focus:ring-green-500 text-green-500'
+    }
   };
+
+  let validstyles = '';
+  if ( nameValid === true ) {
+    validstyles = ' focus:ring-green-500 text-green-500'
+  } else if ( nameValid === false ) {
+    validstyles = ' focus:ring-red-500 text-red-500'
+  }
 
   return (
     <span className="mb-5 text-lg text-white ">
@@ -17,7 +32,7 @@ const NameInput = () => {
       <input ref={inputref} type="text" className="py-1 px-2 ml-5 rounded-lg text-gray-900" />
       <button
         onClick={NameConfirmHandler}
-        className="drop-shadow-lg bg-gray-800 hover:bg-gray-600 focus:outline-none focus:ring focus:ring-gray-500 text-lg text-white font-bold ml-10 mt-5 mb-1 rounded-2xl py-2 px-7"
+        className={"button2" + validstyles}
       >
         Name bestätigen
       </button>

@@ -1,28 +1,34 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { nameContext } from "../../Helpers/Context";
+import { moodTextContext } from "../../Helpers/Context";
+import ButtonElement from "./ButtonElement";
 
 import veryhappy from "../../assets/very-happy.png";
 import happy from "../../assets/happy.png";
 import neutral from "../../assets/neutral.png";
 import sad from "../../assets/sad.png";
 import verysad from "../../assets/very-sad.png";
-import { moodTextContext } from "../../Helpers/Context";
-import ButtonElement from "./ButtonElement";
 
 const Happiness = () => {
 
   const { name } = useContext(nameContext);
 
+  let disablebutton = true;
+  if ( name.length == 0 ) {
+    disablebutton = true;
+  } else if ( name.length > 0 ) {
+    disablebutton = false;
+  }
+
   const veryhappytext = [
       `${name} kam heute sehr zufrieden in die Tagesstätte.`,
-    "Hr. Musterklient ging heute mit einem Lächeln in die Tagesstätte und wirkte sehr zufrieden",
-    "Hr. Musterklient war heute sehr gut aufgelegt und grüßte freundlich beim Betreten der Tagesstätte",
+      `${name} ging heute mit einem Lächeln in die Tagesstätte und wirkte sehr zufrieden`,
+      `${name} war heute sehr gut aufgelegt und grüßte freundlich beim Betreten der Tagesstätte`,
   ];
   const happytext = ["happy1", "happy2", "happy3"];
   const neutraltext = ["neutral1", "neutral2", "neutral3"];
   const sadtext = ["sad1", "sad2", "sad3"];
   const verysadtext = ["verysad1", "verysad2", "verysad3"];
-
 
   const { setMoodText } = useContext(moodTextContext);
 
@@ -59,26 +65,31 @@ const Happiness = () => {
         <ButtonElement
           icon={veryhappy}
           text={ACTION.EXZELLENT}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={happy}
           text={ACTION.GUT}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={neutral}
           text={ACTION.NEUTRAL}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={sad}
           text={ACTION.SCHLECHT}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
           icon={verysad}
           text={ACTION.MISERABEL}
+          disable={disablebutton}
           onSelect={selectMoodHandler}
         />
       </div>

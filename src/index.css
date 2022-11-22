@@ -16,6 +16,10 @@ body {
     @apply text-center text-gray-500 dark:text-gray-400;
   }
 
+  .button2 {
+    @apply drop-shadow-lg bg-gray-900 hover:bg-gray-600 focus:outline-none focus:ring focus:ring-gray-500 text-lg text-white font-bold ml-10 mt-5 mb-1 rounded-2xl py-2 px-7;
+  }
+
   .mood-image {
     @apply mx-auto mb-2 w-12 h-12 rounded-full bg-white p-2 hover:brightness-50 focus:brightness-50;
   }
