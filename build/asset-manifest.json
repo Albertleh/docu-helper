@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9c6735cc.css",
-    "main.js": "/static/js/main.0ffd5a59.js",
+    "main.css": "/static/css/main.303079d9.css",
+    "main.js": "/static/js/main.91d78f76.js",
     "static/js/787.b3c02f73.chunk.js": "/static/js/787.b3c02f73.chunk.js",
     "static/media/sad.png": "/static/media/sad.821cf21437efb04d4734.png",
     "static/media/happy.png": "/static/media/happy.1016fef8750efa0288bb.png",
@@ -15,13 +15,20 @@
     "static/media/mood-sleepy.png": "/static/media/mood-sleepy.13ddc28a83b1ea0bbf1d.png",
     "static/media/mood-annoyed.png": "/static/media/mood-annoyed.fab0b8deca81d312b82d.png",
     "static/media/mood-confirmation.png": "/static/media/mood-confirmation.cd2e5147ae465b388dc7.png",
+    "static/media/mirror.png": "/static/media/mirror.9cd27988565ca524da7e.png",
+    "static/media/broom.png": "/static/media/broom.72fd864be8f160210105.png",
+    "static/media/walk.png": "/static/media/walk.048bc9076ca1ca7d2e42.png",
+    "static/media/recycle-bin.png": "/static/media/recycle-bin.201b5c153498691194ac.png",
+    "static/media/hand.png": "/static/media/hand.ca9e159765f78636f9c6.png",
+    "static/media/kaffee.png": "/static/media/kaffee.6f0a70168b157203d75f.png",
+    "static/media/tupperware.png": "/static/media/tupperware.f9c30d6fbc807de573e6.png",
     "index.html": "/index.html",
-    "main.9c6735cc.css.map": "/static/css/main.9c6735cc.css.map",
-    "main.0ffd5a59.js.map": "/static/js/main.0ffd5a59.js.map",
+    "main.303079d9.css.map": "/static/css/main.303079d9.css.map",
+    "main.91d78f76.js.map": "/static/js/main.91d78f76.js.map",
     "787.b3c02f73.chunk.js.map": "/static/js/787.b3c02f73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c6735cc.css",
-    "static/js/main.0ffd5a59.js"
+    "static/css/main.303079d9.css",
+    "static/js/main.91d78f76.js"
   ]
 }
