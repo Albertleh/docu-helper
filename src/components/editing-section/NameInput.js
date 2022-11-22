@@ -26,7 +26,7 @@ const NameInput = () => {
   }
 
   return (
-    <span className="mb-3 text-lg text-white ">
+    <span className="mb-3 ml-5 text-lg text-white ">
       Name des Klienten:
       <input ref={inputref} type="text" className="py-1 px-2 ml-5 rounded-lg text-gray-900" />
       <button

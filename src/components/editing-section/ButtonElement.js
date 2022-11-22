@@ -11,10 +11,10 @@ const ButtonElement = (props) => {
   } 
 
   return (
-    <button class="button" onClick={ClickHelper} disabled={props.disable}>
+    <button class="button rounded-xl" onClick={ClickHelper} disabled={props.disable}>
       <img class={"mood-image" + disabledStyles} src={props.icon} alt="Icon" disabled={props.disable} />
       <h3 class={"mood-text" + disabledStyles} disabled={props.disable}>
-        <a href="#">{props.text} </a>
+        <h4 href="#">{props.text} </h4>
       </h3>
     </button>
   );

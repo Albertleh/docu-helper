@@ -113,7 +113,7 @@ const Mood = () => {
         />
         <ButtonElement
           icon={worried}
-          text={ACTION.ENTSPANNT}
+          text={ACTION.BESORGT}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />

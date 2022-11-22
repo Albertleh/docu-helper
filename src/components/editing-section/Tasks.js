@@ -7,6 +7,7 @@ import kaffee from "../../assets/kaffee.png";
 import recyclebin from "../../assets/recycle-bin.png";
 import walk from "../../assets/walk.png";
 import tupperware from "../../assets/tupperware.png";
+import mirror from "../../assets/mirror.png";
 
 import { moodTextContext, nameContext } from "../../Helpers/Context";
 import ButtonElement from "./ButtonElement";
@@ -22,6 +23,7 @@ const Tasks = () => {
   const carrytext = [`Ebenfalls erledigte ${name} am Vormittag diverse Botengänge in die Küche. `];
   const carryluchboxtext = [`${name} hat heute Früh ordnungsgemäß die leere Jausenbox zurück in die Küche gebracht. `];
   const basalstimulationtext = [`${name} bekam heute basale Stimulation zur Beruhigung. Dies zeigte Wirkung und verhalf zur Entspannung. `];
+  const selfoccupationtext = [`Lange Zeit über fand ${name} auch gute Wege, sich selbst zu beschäftigen. `]
 
   let disablebutton = true;
   if ( name.length == 0 ) {
@@ -38,6 +40,7 @@ const Tasks = () => {
     BOTENGAENGE_ERLEDIGT: "Botengänge erledigt",
     JAUSENBOX_RUNTERGETRAGEN: "Jausenbox runtergetragen",
     BASALE_STIMULATION: "basale Stimulation",
+    SELBSTBESCHAEFTIGUNG: "selbst beschäftigt"
   };
 
   const selectMoodHandler = (text) => {
@@ -76,6 +79,11 @@ const Tasks = () => {
         moodText +
         basalstimulationtext[Math.floor(Math.random() * basalstimulationtext.length)],
       ]);
+    } else if (text === ACTION.SELBSTBESCHAEFTIGUNG) {
+      setMoodText([
+        moodText +
+        selfoccupationtext[Math.floor(Math.random() * selfoccupationtext.length)],
+      ]);
     } else {
       alert('error')
     }
@@ -86,7 +94,7 @@ const Tasks = () => {
       <div className="mood-text text-slate-300 font-bold text-2xl">
         Aufgaben
       </div>
-      <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
+      <div class="m-3 grid lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8">
         <ButtonElement
           icon={kaffee}
           text={ACTION.KAFFEE_GEMACHT}
@@ -126,6 +134,12 @@ const Tasks = () => {
         <ButtonElement
           icon={caress}
           text={ACTION.BASALE_STIMULATION}
+          disable={disablebutton}
+          onSelect={selectMoodHandler}
+        />
+        <ButtonElement
+          icon={mirror}
+          text={ACTION.SELBSTBESCHAEFTIGUNG}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />

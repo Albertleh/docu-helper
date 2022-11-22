@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// import Main from "./components/Main";
 import { moodTextContext } from "./Helpers/Context";
 import { nameContext } from "./Helpers/Context";
 
