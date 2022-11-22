@@ -21,18 +21,18 @@ const Happiness = () => {
   }
 
   const veryhappytext = [
-      `${name} kam heute sehr zufrieden in die Tagesstätte.`,
-      `${name} ging heute mit einem Lächeln in die Tagesstätte und wirkte sehr zufrieden`,
-      `${name} war heute scheinbar sehr gut aufgelegt und grüßte freundlich beim Betreten der Tagesstätte`,
+      `${name} kam heute sehr zufrieden in die Tagesstätte. `,
+      `${name} ging heute mit einem Lächeln in die Tagesstätte und wirkte sehr zufrieden. `,
+      `${name} war heute scheinbar sehr gut aufgelegt und grüßte freundlich beim Betreten der Tagesstätte. `,
   ];
-  const happytext = [`${name} kam heute allgemein zufrieden in die Tagesstätte.`, 
-                     `${name} ging heute wohlauf in die Tagesstätte und wirkte allgemein ziemlich zufrieden`];
-  const neutraltext = [`${name} wirkte heute beim Betreten der Werkstätte von der Zuftriedenheit relativ neutral .`, 
-                       `${name} zeigte heute eine relativ ausgewogene Grundstimmung und wirkte allgemein ausgeglichen.`];
-  const sadtext = [`${name} kam heute betrübt in die Tagesstätte und wirkte leicht schlecht gelaunt.`, 
-                   `${name} betrat heute wenig zufrieden in die Tagesstätte und zeigte unglückliches Verhalten.`];
-  const verysadtext = [`${name} kam heute sichtbar miserabel gelaunt in die Tagesstätte und verbalisierte immer wieder schlechte Stimmung.`, 
-                       `${name} wirkte beim Betreten der Tagesstätte sehr schlecht gelaunt und gestikulierte sich abweisend.`];
+  const happytext = [`${name} kam heute allgemein zufrieden in die Tagesstätte. `, 
+                     `${name} ging heute wohlauf in die Tagesstätte und wirkte allgemein ziemlich zufrieden. `];
+  const neutraltext = [`${name} wirkte heute beim Betreten der Werkstätte von der Zuftriedenheit relativ neutral. `, 
+                       `${name} zeigte heute eine relativ ausgewogene Grundstimmung und wirkte allgemein ausgeglichen. `];
+  const sadtext = [`${name} kam heute betrübt in die Tagesstätte und wirkte leicht schlecht gelaunt. `, 
+                   `${name} betrat heute wenig zufrieden in die Tagesstätte und zeigte unglückliches Verhalten. `];
+  const verysadtext = [`${name} kam heute sichtbar miserabel gelaunt in die Tagesstätte und verbalisierte immer wieder schlechte Stimmung. `, 
+                       `${name} wirkte beim Betreten der Tagesstätte sehr schlecht gelaunt und gestikulierte sich abweisend. `];
 
   const { setMoodText } = useContext(moodTextContext);
 

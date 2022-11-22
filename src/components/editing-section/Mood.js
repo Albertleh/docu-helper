@@ -12,17 +12,19 @@ import { moodTextContext } from "../../Helpers/Context";
 import { nameContext } from "../../Helpers/Context";
 import ButtonElement from "./ButtonElement";
 
-const annoyedtext = ["annoyed1", "annoyed2", "annoyed3"];
-const confirmationtext = ["confirmation1", "confirmation2", "confirmation3"];
-const sadtext = ["sad1", "sad2", "sad3"];
-const sleepytext = ["sleepy1", "sleepy2", "sleepy3"];
-const worriedtext = ["worried1", "worried2", "worried3"];
-const relaxedtext = ["relaxed1", "relaxed2", "relaxed3"];
-const angrytext = ["angry1", "angry2", "angry3"];
+
 
 const Mood = () => {
   const { moodText, setMoodText } = useContext(moodTextContext);
   const { name } = useContext(nameContext);
+
+  const annoyedtext = [`Außerdem wirkte ${name} während des Vormittags über genervt und auch ein bisschen missverstanden. `];
+  const confirmationtext = [`Ebenfalls suchte ${name} zunehmend Bestätigung von dem Betreuerteam und stellt sich selbst in Frage. `];
+  const sadtext = [`Außerdem wirkte ${name} während den frühen Stunden ein wenig traurig, was auf die isolierende Gestikulierung zurückzuführen war. `];
+  const sleepytext = [`Zudem schien es so als hätte ${name} nicht gut oder ausreichen  geschlafen, da die Gestikulierung (insbesodere durch Gähnen) auf Müdigkeit hinwies. `];
+  const worriedtext = [`Abgesehen davon wirkte ${name} die ganze Zeit über ein wenig betrübt und gestikulierte sich besorgt. `];
+  const relaxedtext = [`Ebenfalls zu erwähnen ist, dass sich ${name} heute sehr ruhig verhielt und die Zeit über in einem allgemein entspannten Zustand verweilt. `];
+  const angrytext = [`${name}'s Unwohlsein und Zorn war heute nicht zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken befeuert wurde. `];
 
   let disablebutton = true;
   if ( name.length == 0 ) {
@@ -44,37 +46,37 @@ const Mood = () => {
   const selectMoodHandler = (text) => {
     if (text === ACTION.GENERVT) {
       setMoodText([
-        ...moodText,
+        moodText + 
         annoyedtext[Math.floor(Math.random() * annoyedtext.length)],
       ]);
     } else if (text === ACTION.SUCHT_BESTAETIGUNG) {
       setMoodText([
-        ...moodText,
+        moodText +
         confirmationtext[Math.floor(Math.random() * confirmationtext.length)],
       ]);
     } else if (text === ACTION.NEUTRAL) {
       setMoodText([
-        ...moodText,
+        moodText +
         sadtext[Math.floor(Math.random() * sadtext.length)],
       ]);
     } else if (text === ACTION.NEUTRAL) {
       setMoodText([
-        ...moodText,
+        moodText +
         relaxedtext[Math.floor(Math.random() * relaxedtext.length)],
       ]);
     } else if (text === ACTION.NEUTRAL) {
       setMoodText([
-        ...moodText,
+        moodText +
         angrytext[Math.floor(Math.random() * angrytext.length)],
       ]);
     } else if (text === ACTION.SCHLECHT) {
       setMoodText([
-        ...moodText,
+        moodText +
         sleepytext[Math.floor(Math.random() * sleepytext.length)],
       ]);
     } else {
       setMoodText([
-        ...moodText,
+        moodText +
         worriedtext[Math.floor(Math.random() * worriedtext.length)],
       ]);
     }

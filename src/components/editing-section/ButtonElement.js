@@ -3,7 +3,6 @@ import React from "react";
 const ButtonElement = (props) => {
   const ClickHelper = () => {
     props.onSelect(props.text);
-    console.log('was clicked')
   }
 
   let disabledStyles = '';

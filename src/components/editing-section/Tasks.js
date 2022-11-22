@@ -11,16 +11,17 @@ import React, { useContext } from "react";
 import { moodTextContext, nameContext } from "../../Helpers/Context";
 import ButtonElement from "./ButtonElement";
 
-const makingcoffeetext = ["makingcoffee1", "makingcoffee2", "makingcoffee3"];
-const takingouttrashtext = ["takingouttrash1", "takingouttrash2", "takingouttrash3"];
-const cleaningtext = ["cleaning1", "cleaning2", "cleaning3"];
-const participatingtext = ["participating1", "participating2", "participating3"];
-const carrytext = ["carry1", "carry2", "carry3"];
-const carryluchboxtext = ["carryluchbox1", "carryluchbox2", "carryluchbox3"];
-
 const Tasks = () => {
   const { moodText, setMoodText } = useContext(moodTextContext);
   const { name } = useContext(nameContext);
+
+  const makingcoffeetext = [`Bezüglich Tätigkeiten hat ${name} heute die Aufgabe des Kaffeekochens angenommen und auch erfüllt. `];
+  const takingouttrashtext = [`Ebenfalls wurde der Müll heute von ${name} selbstständig zum Müllplatz getragen und dort entsorgt. `];
+  const cleaningtext = [`${name}`];
+  const participatingtext = [``];
+  const carrytext = [``];
+  const carryluchboxtext = [``];
+  const basalstimulationtext = [``];
 
   let disablebutton = true;
   if ( name.length == 0 ) {
@@ -29,7 +30,6 @@ const Tasks = () => {
     disablebutton = false;
   }
 
-
   const ACTION = {
     KAFFEE_GEMACHT: "Kaffee gemacht",
     MUELL_RAUSGETRAGEN: "Müll rausgetragen",
@@ -37,38 +37,44 @@ const Tasks = () => {
     GRUPPENGESCHEHEN_TEILGENOMMEN: "Geschehen teilgenommen",
     BOTENGAENGE_ERLEDIGT: "Botengänge erledigt",
     JAUSENBOX_RUNTERGETRAGEN: "Jausenbox runtergetragen",
+    BASALE_STIMULATION: "basale Stimulation",
   };
 
   const selectMoodHandler = (text) => {
     if (text === ACTION.KAFFEE_GEMACHT) {
       setMoodText([
-        ...moodText,
+        moodText +
         makingcoffeetext[Math.floor(Math.random() * makingcoffeetext.length)],
       ]);
     } else if (text === ACTION.MUELL_RAUSGETRAGEN) {
       setMoodText([
-        ...moodText,
+        moodText +
         takingouttrashtext[Math.floor(Math.random() * takingouttrashtext.length)],
       ]);
     } else if (text === ACTION.HAT_AUFGERAEUMT) {
       setMoodText([
-        ...moodText,
+        moodText +
         cleaningtext[Math.floor(Math.random() * cleaningtext.length)],
       ]);
     } else if (text === ACTION.GRUPPENGESCHEHEN_TEILGENOMMEN) {
       setMoodText([
-        ...moodText,
+        moodText +
         participatingtext[Math.floor(Math.random() * participatingtext.length)],
       ]);
     } else if (text === ACTION.BOTENGAENGE_ERLEDIGT) {
       setMoodText([
-        ...moodText,
+        moodText +
         carrytext[Math.floor(Math.random() * carrytext.length)],
       ]);
     } else if (text === ACTION.JAUSENBOX_RUNTERGETRAGEN) {
       setMoodText([
-        ...moodText,
+        moodText +
         carryluchboxtext[Math.floor(Math.random() * carryluchboxtext.length)],
+      ]);
+    } else if (text === ACTION.BASALE_STIMULATION) {
+      setMoodText([
+        moodText +
+        basalstimulationtext[Math.floor(Math.random() * basalstimulationtext.length)],
       ]);
     } else {
       alert('error')
@@ -114,6 +120,12 @@ const Tasks = () => {
         <ButtonElement
           icon={undefined}
           text={ACTION.JAUSENBOX_RUNTERGETRAGEN}
+          disable={disablebutton}
+          onSelect={selectMoodHandler}
+        />
+        <ButtonElement
+          icon={undefined}
+          text={ACTION.BASALE_STIMULATION}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />

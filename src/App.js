@@ -11,6 +11,7 @@ function App() {
   const [moodText, setMoodText] = useState("");
   const [name, setName] = useState("");
 
+  console.log(moodText);
   return (
     <nameContext.Provider value={{ name, setName }}>
       <moodTextContext.Provider value={{ moodText, setMoodText }}>
