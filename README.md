@@ -1,3 +1,8 @@
+# Caritas Documentation Helper 
+
+This tool provides the Caritas caregivers with a better user interface for documenting Behavior of Clients.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
