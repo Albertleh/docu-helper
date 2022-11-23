@@ -1,6 +1,6 @@
 # Caritas Documentation Helper 
 
-This tool provides the Caritas caregivers with a better user interface for documenting Behavior of Clients.
+This tool provides Caritas caregivers with a faster and efficient user interface for documenting behavior of clients.
 
 
 # Getting Started with Create React App
