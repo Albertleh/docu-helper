@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 
 import broom from "../../assets/broom.png";
-import caress from "../../assets/caress.png";
 import hand from "../../assets/hand.png";
 import kaffee from "../../assets/kaffee.png";
 import recyclebin from "../../assets/recycle-bin.png";
@@ -22,7 +21,6 @@ const Tasks = () => {
   const participatingtext = [`Außerdem ist zu betonen, dass ${name} heute sich aktiv in das Gruppengeschehen eingebracht hat und sehr proaktiv agierte. `];
   const carrytext = [`Ebenfalls erledigte ${name} am Vormittag diverse Botengänge in die Küche. `];
   const carryluchboxtext = [`${name} hat heute Früh ordnungsgemäß die leere Jausenbox zurück in die Küche gebracht. `];
-  const basalstimulationtext = [`${name} bekam heute basale Stimulation zur Beruhigung. Dies zeigte Wirkung und verhalf zur Entspannung. `];
   const selfoccupationtext = [`Lange Zeit über fand ${name} auch gute Wege, sich selbst zu beschäftigen. `]
 
   let disablebutton = true;
@@ -39,7 +37,6 @@ const Tasks = () => {
     GRUPPENGESCHEHEN_TEILGENOMMEN: "Geschehen teilgenommen",
     BOTENGAENGE_ERLEDIGT: "Botengänge erledigt",
     JAUSENBOX_RUNTERGETRAGEN: "Jausenbox runtergetragen",
-    BASALE_STIMULATION: "basale Stimulation",
     SELBSTBESCHAEFTIGUNG: "selbst beschäftigt"
   };
 
@@ -73,11 +70,6 @@ const Tasks = () => {
       setMoodText([
         moodText +
         carryluchboxtext[Math.floor(Math.random() * carryluchboxtext.length)],
-      ]);
-    } else if (text === ACTION.BASALE_STIMULATION) {
-      setMoodText([
-        moodText +
-        basalstimulationtext[Math.floor(Math.random() * basalstimulationtext.length)],
       ]);
     } else if (text === ACTION.SELBSTBESCHAEFTIGUNG) {
       setMoodText([
@@ -128,12 +120,6 @@ const Tasks = () => {
         <ButtonElement
           icon={tupperware}
           text={ACTION.JAUSENBOX_RUNTERGETRAGEN}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={caress}
-          text={ACTION.BASALE_STIMULATION}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />

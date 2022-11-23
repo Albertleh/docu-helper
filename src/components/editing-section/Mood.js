@@ -41,6 +41,11 @@ const Mood = () => {
     SAUER: "fremd- aggressiv",
     SCHLAEFRIG: "schläfrig",
     ENTSPANNT: "entspannt",
+    GESPRAECHIG: "gesprächig",
+    HILFSBEREIT: "hilfsbereit",
+    ANGETRIEBEN: "angetrieben",
+    NERVOES: "nervös",
+    
   };
 
   const selectMoodHandler = (text) => {

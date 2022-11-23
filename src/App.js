@@ -6,6 +6,7 @@ import { nameContext } from "./Helpers/Context";
 import Dokupage from "./components/editing-section/Dokupage";
 import Results from "./components/Results";
 
+
 function App() {
   const [moodText, setMoodText] = useState("");
   const [name, setName] = useState("");

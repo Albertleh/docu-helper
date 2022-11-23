@@ -4,6 +4,7 @@ import Happiness from "./Happiness";
 import Mood from "./Mood";
 import NameInput from "./NameInput";
 import Tasks from "./Tasks";
+import Measures from "./Measures";
 
 const Dokupage = () => {
   return (
@@ -14,6 +15,9 @@ const Dokupage = () => {
       </div>
       <div className="card-inner">
         <Mood />
+      </div>
+      <div className="card-inner mb-3">
+        <Measures />
       </div>
       <div className="card-inner mb-3">
         <Tasks />
