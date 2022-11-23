@@ -27,8 +27,8 @@ const Happiness = () => {
   ];
   const happytext = [`${name} kam heute allgemein zufrieden in die Tagesstätte. `, 
                      `${name} ging heute wohlauf in die Tagesstätte und wirkte allgemein ziemlich zufrieden. `];
-  const neutraltext = [`${name} wirkte heute beim Betreten der Werkstätte von der Zuftriedenheit relativ neutral. `, 
-                       `${name} zeigte heute eine relativ ausgewogene Grundstimmung und wirkte allgemein ausgeglichen. `];
+  const neutraltext = [`${name} wirkte heute beim Betreten der Werkstätte von der Zuftriedenheit gemischt. `, 
+                       `${name} zeigte heute eine ausgeglichene Stimmung und wirkte allgemein neutral in seiner Zufriedenheit. `];
   const sadtext = [`${name} kam heute betrübt in die Tagesstätte und wirkte leicht schlecht gelaunt. `, 
                    `${name} betrat heute wenig zufrieden in die Tagesstätte und zeigte unglückliches Verhalten. `];
   const verysadtext = [`${name} kam heute sichtbar miserabel gelaunt in die Tagesstätte und verbalisierte immer wieder schlechte Stimmung. `, 

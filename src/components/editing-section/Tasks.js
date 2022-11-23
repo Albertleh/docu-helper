@@ -37,7 +37,10 @@ const Tasks = () => {
     GRUPPENGESCHEHEN_TEILGENOMMEN: "Geschehen teilgenommen",
     BOTENGAENGE_ERLEDIGT: "Botengänge erledigt",
     JAUSENBOX_RUNTERGETRAGEN: "Jausenbox runtergetragen",
-    SELBSTBESCHAEFTIGUNG: "selbst beschäftigt"
+    SELBSTBESCHAEFTIGUNG: "selbst beschäftigt",
+    TUERDIENST: "Türdienst",
+    KUENSTLERISCHE_TAETIGKEIT: "künstlerische Tätigkeit",
+    RAUCHEN: "Rauchen",
   };
 
   const selectMoodHandler = (text) => {
@@ -126,6 +129,24 @@ const Tasks = () => {
         <ButtonElement
           icon={mirror}
           text={ACTION.SELBSTBESCHAEFTIGUNG}
+          disable={disablebutton}
+          onSelect={selectMoodHandler}
+        />
+        <ButtonElement
+          icon={mirror}
+          text={ACTION.TUERDIENST}
+          disable={disablebutton}
+          onSelect={selectMoodHandler}
+        />
+        <ButtonElement
+          icon={mirror}
+          text={ACTION.KUENSTLERISCHE_TAETIGKEIT}
+          disable={disablebutton}
+          onSelect={selectMoodHandler}
+        />
+        <ButtonElement
+          icon={mirror}
+          text={ACTION.RAUCHEN}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
