@@ -23,15 +23,15 @@ const Tasks = () => {
   const cleaningtext = [`${name} war heute sehr um die Sauberkeit der Gruppe bemüht und nahm selbstbestimmt diverse Reinungstätigkeiten an. `];
   const participatingtext = [`Außerdem ist zu betonen, dass ${name} heute sich aktiv in das Gruppengeschehen eingebracht hat und sehr proaktiv agierte. `];
   const carrytext = [`Ebenfalls erledigte ${name} am Vormittag diverse Botengänge in die Küche. `];
-  const carryluchboxtext = [`${name} hat heute Früh ordnungsgemäß die leere Jausenbox zurück in die Küche gebracht. `];
+  const carryluchboxtext = [`${name} hat heute Früh die leere Jausenbox zurück in die Küche gebracht. `];
   const selfoccupationtext = [`Lange Zeit über fand ${name} auch gute Wege, sich selbst zu beschäftigen. `]
-  const doorservicetext = [`${name} übernahm voluntaristisch für einige Zeit den Türdienst, um Hrn. Miedler vor sich selbst zu schützen. `]
+  const doorservicetext = [`${name} übernahm freiwillig für einige Zeit den Türdienst, um Hrn. Miedler vor sich selbst zu schützen. `]
   const artistictext = [`Weiters fand ${name} am Vormittag Freude am ausüben künstlerischer Tätigkeiten. `, 
                         `${name} betätigt sich für einige Zeit des Vormittags künstlerisch. `]
-  const smokingtext = [`Ebenfalls nennenswert ist, dass ${name} heute überdurchschnittlich viel Zeit mit dem Rauchen verbrachte. `]
+  const smokingtext = [`Ebenfalls nennenswert ist, dass ${name} heute einige Zeit mit Rauchen verbrachte. `]
 
   let disablebutton = true;
-  if ( name.length == 0 ) {
+  if ( name.length === 0 ) {
     disablebutton = true;
   } else if ( name.length > 0 ) {
     disablebutton = false;

@@ -17,15 +17,15 @@ const Measures = () => {
   const { name } = useContext(nameContext);
 
   const basalstimulationtext = [`${name} benötigt heute basale Stimulation zur Beruhigung. Dies zeigte Wirkung und verhalf zur Entspannung. `];
-  const strukturtext = [`${name} benötigt heute vermehrt Strukturmaßnahmen durh das Betreuerteam, was sich auch als Wirkungsvoll zeigt. `];
+  const strukturtext = [`${name} benötigt heute  strukturierte Maßnahmen durch das Betreuerteam, was sich auch als Wirkungsvoll zeigt. `];
   const gespraechtext = [`Heute braucht es bei ${name} ein Einzelgespräch, um die Anforderungen des Betreuerteams mit den Anliegen von ${name} zu vereinbaren. `];
   const einzelsettingtext = [`${name} benötigt heute viel Betreuung im Einzelsetting, wodurch die Anforderungen des Klienten wahr genommen werden konnten. `];
-  const beobachtungstext = [`${name} braucht heute Vormittag außerdem akribische Beobachtung, um ${name}'s Wohlsein zu gewährleisten. `];
+  const beobachtungstext = [`${name} braucht heute Vormittag außerdem akribische Beobachtung, um ${name}'s Sicherheit zu gewährleisten. `];
   const unterstützungstext = [`${name} benötigt heute viel Unterstützung durch das Betreuerteam, da an diesem Vormittag die Alltagstätigkeiten schwer bewältigbar sind. `];
-  const verbaleanleitungstext = [`${name} benötigt diesen Vormittag vermehrt verbale Anleitung beim Ausführen diverser Aufgaben durch das Betreuerteam. `];
+  const verbaleanleitungstext = [`${name} benötigt diesen Vormittag verbale Anleitung beim Ausführen diverser Aufgaben durch das Betreuerteam. `];
 
   let disablebutton = true;
-  if ( name.length == 0 ) {
+  if ( name.length === 0 ) {
     disablebutton = true;
   } else if ( name.length > 0 ) {
     disablebutton = false;

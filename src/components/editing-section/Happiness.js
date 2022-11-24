@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { nameContext } from "../../Helpers/Context";
 import { moodTextContext } from "../../Helpers/Context";
 import ButtonElement from "./ButtonElement";
@@ -14,7 +14,7 @@ const Happiness = () => {
   const { name } = useContext(nameContext);
 
   let disablebutton = true;
-  if ( name.length == 0 ) {
+  if ( name.length === 0 ) {
     disablebutton = true;
   } else if ( name.length > 0 ) {
     disablebutton = false;
@@ -37,11 +37,11 @@ const Happiness = () => {
   const { setMoodText } = useContext(moodTextContext);
 
   const ACTION = {
-    EXZELLENT: "Exzellent",
+    EXZELLENT: "Sehr Gut",
     GUT: "Gut",
     NEUTRAL: "Neutral",
     SCHLECHT: "Schlecht",
-    MISERABEL: "Miserabel",
+    MISERABEL: "Sehr Schlecht",
   };
 
   const selectMoodHandler = (text) => {

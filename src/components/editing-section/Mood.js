@@ -14,7 +14,6 @@ import talkative from "../../assets/talkative.png";
 import prediction from "../../assets/prediction.png";
 import nervous from "../../assets/nervous.png";
 import energy from "../../assets/energy.png";
-import support from "../../assets/support.png";
 import smartphone from "../../assets/smartphone.png";
 
 
@@ -33,10 +32,10 @@ const Mood = () => {
     `Ebenfalls suchte ${name} zunehmend Bestätigung von dem Betreuerteam und stellt sich öfters selbst in Frage. `,
   ];
   const sadtext = [
-    `Außerdem wirkte ${name} während den frühen Stunden ein wenig traurig, was auf die isolierende Gestikulierung zurückzuführen war. `,
+    `Außerdem wirkte ${name} während den frühen Stunden ein wenig traurig, was auf die isolierende Gestik zurückzuführen war. `,
   ];
   const sleepytext = [
-    `Zudem schien es so als hätte ${name} nicht gut oder ausreichen  geschlafen, da die Gestikulierung (insbesodere durch Gähnen) auf Müdigkeit hinwies. `,
+    `Zudem schien es so als hätte ${name} nicht gut oder ausreichen  geschlafen, da die Gestik (insbesodere durch Gähnen) auf Müdigkeit hinwies. `,
   ];
   const worriedtext = [
     `Abgesehen davon wirkte ${name} die ganze Zeit über ein wenig betrübt und gestikulierte sich besorgt. `,
@@ -54,7 +53,7 @@ const Mood = () => {
     `${name}'s Hilfsbereitschaft war am heutigen Tag deutlich zu erkennen, da dem Betreuerteam oft Unterstützung bei ihren Tätigkeiten angeboten wurde. `,
   ];
   const angetriebentext = [
-    `${name} wirkt heute ein wenig Sprunghaft und impulsiv, da die Gestikulierung des öfteren darauf hinwies. ${name} pendelt öfters zwischen verschiedenen Sitzplätzen hin und her. `,
+    `${name} wirkt heute ein wenig Sprunghaft und impulsiv, da die Gestik des öfteren darauf hinwies. ${name} pendelt öfters zwischen verschiedenen Sitzplätzen hin und her. `,
   ];
   const nervoestext = [
     `Nicht zuletzt zeigte ${name} am Vormittag vermehrt nervöses Verhalten. Schnelles Sprechen, unruhiges Sitzen und ruckartige Bewegungsimpulse zählten zu den Symptomen. In Folge wurden ${name} Methoden zur Stressbewältigung angeboten. `,
@@ -73,7 +72,7 @@ const Mood = () => {
   ];
 
   let disablebutton = true;
-  if (name.length == 0) {
+  if (name.length === 0) {
     disablebutton = true;
   } else if (name.length > 0) {
     disablebutton = false;
