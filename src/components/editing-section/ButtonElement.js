@@ -1,14 +1,18 @@
 import React from "react";
 
 const ButtonElement = (props) => {
+
+  var disabledStyles = '';
+
   const ClickHelper = () => {
     props.onSelect(props.text);
   }
 
-  let disabledStyles = '';
   if ( props.disable === true ) {
     disabledStyles = ' brightness-50'
   } 
+
+
 
   return (
     <button class="button rounded-xl" onClick={ClickHelper} disabled={props.disable}>

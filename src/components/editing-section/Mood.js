@@ -60,7 +60,7 @@ const Mood = () => {
     `Nicht zuletzt zeigte ${name} am Vormittag vermehrt nervöses Verhalten. Schnelles Sprechen, unruhiges Sitzen und ruckartige Bewegungsimpulse zählten zu den Symptomen. In Folge wurden ${name} Methoden zur Stressbewältigung angeboten. `,
   ];
   const handyeinstellungentext = [
-    `${name} hatte heute Schwierigkeiten mit der Konfiguration des Smartphones. Das Betreuerteam verweiste auf mögliche Lösungsansätze, verwies jedoch ebenfalls auf das Handyverbot. `,
+    `${name} hatte heute Schwierigkeiten mit der Konfiguration des Smartphones. Das Betreuerteam zeigte mögliche Lösungsansätze auf, verwies jedoch ebenfalls auf das Handyverbot. `,
   ];
   const draussenaufhaltendtext = [
     `${name} hielt sich heute allgemein sehr gerne draußen am Hof auf, nachdem das Betreuerteam entsprechende Kleidung sicherstellte. Vereinzelt kam es auch draußen zur Begegnung mit Personal und Klientel außerhalb der eigenen Gruppe. `,
