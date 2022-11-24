@@ -7,6 +7,9 @@ import recyclebin from "../../assets/recycle-bin.png";
 import walk from "../../assets/walk.png";
 import tupperware from "../../assets/tupperware.png";
 import mirror from "../../assets/mirror.png";
+import smoking from "../../assets/smoking.png";
+import door from "../../assets/door.png";
+import paint from "../../assets/paint.png";
 
 import { moodTextContext, nameContext } from "../../Helpers/Context";
 import ButtonElement from "./ButtonElement";
@@ -22,6 +25,10 @@ const Tasks = () => {
   const carrytext = [`Ebenfalls erledigte ${name} am Vormittag diverse Botengänge in die Küche. `];
   const carryluchboxtext = [`${name} hat heute Früh ordnungsgemäß die leere Jausenbox zurück in die Küche gebracht. `];
   const selfoccupationtext = [`Lange Zeit über fand ${name} auch gute Wege, sich selbst zu beschäftigen. `]
+  const doorservicetext = [`${name} übernahm voluntaristisch für einige Zeit den Türdienst, um Hrn. Miedler vor sich selbst zu schützen. `]
+  const artistictext = [`Weiters fand ${name} am Vormittag Freude am ausüben künstlerischer Tätigkeiten. `, 
+                        `${name} betätigt sich für einige Zeit des Vormittags künstlerisch. `]
+  const smokingtext = [`Ebenfalls nennenswert ist, dass ${name} heute überdurchschnittlich viel Zeit mit dem Rauchen verbrachte. `]
 
   let disablebutton = true;
   if ( name.length == 0 ) {
@@ -79,6 +86,21 @@ const Tasks = () => {
         moodText +
         selfoccupationtext[Math.floor(Math.random() * selfoccupationtext.length)],
       ]);
+    } else if (text === ACTION.TUERDIENST) {
+      setMoodText([
+        moodText +
+        doorservicetext[Math.floor(Math.random() * doorservicetext.length)],
+      ]);
+    } else if (text === ACTION.RAUCHEN) {
+      setMoodText([
+        moodText +
+        smokingtext[Math.floor(Math.random() * smokingtext.length)],
+      ]);
+    } else if (text === ACTION.KUENSTLERISCHE_TAETIGKEIT) {
+      setMoodText([
+        moodText +
+        artistictext[Math.floor(Math.random() * artistictext.length)],
+      ]);
     } else {
       alert('error')
     }
@@ -133,19 +155,19 @@ const Tasks = () => {
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={mirror}
+          icon={door}
           text={ACTION.TUERDIENST}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={mirror}
+          icon={paint}
           text={ACTION.KUENSTLERISCHE_TAETIGKEIT}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={mirror}
+          icon={smoking}
           text={ACTION.RAUCHEN}
           disable={disablebutton}
           onSelect={selectMoodHandler}

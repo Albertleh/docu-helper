@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
 
-import annoyed from "../../assets/mood-annoyed.png";
-import confirmation from "../../assets/mood-confirmation.png";
-import sad from "../../assets/mood-sad.png";
-import sleepy from "../../assets/mood-sleepy.png";
-import worried from "../../assets/mood-worried.png";
-import relaxed from "../../assets/mood-relaxed.png";
-import angry from "../../assets/mood-angry.png";
+import consulting from "../../assets/consulting.png";
+import diagram from "../../assets/diagram.png";
+import instruction from "../../assets/instruction.png";
+import observer from "../../assets/observer.png";
+import support from "../../assets/support.png";
 import caress from "../../assets/caress.png";
+import speak from "../../assets/speak.png";
 
 import { moodTextContext } from "../../Helpers/Context";
 import { nameContext } from "../../Helpers/Context";
@@ -23,6 +22,7 @@ const Measures = () => {
   const einzelsettingtext = [`Abgesehen davon wirkte ${name} die ganze Zeit über ein wenig betrübt und gestikulierte sich besorgt. `];
   const beobachtungstext = [`Ebenfalls zu erwähnen ist, dass sich ${name} heute sehr ruhig verhielt und die Zeit über in einem allgemein entspannten Zustand verweilt. `];
   const unterstützungstext = [`${name}'s Aggression gegenüber anderen Klienten war heute kaum zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken und Handgriffe befeuert wurde. `];
+  const verbaleanleitungstext = [`${name}'s Aggression gegenüber anderen Klienten war heute kaum zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken und Handgriffe befeuert wurde. `];
 
   let disablebutton = true;
   if ( name.length == 0 ) {
@@ -38,6 +38,7 @@ const Measures = () => {
     EINZELSETTING_BETREUT: "Einzelsetting betreut",
     BEOBACHTUNG: "vermehrte Beobachtung",
     UNTERSTUETZUNG: "Unterstützung",
+    VERBALE_ANLEITUNG: "verbale Anleitung",
   };
 
   const selectMoodHandler = (text) => {
@@ -66,7 +67,12 @@ const Measures = () => {
         moodText +
         beobachtungstext[Math.floor(Math.random() * beobachtungstext.length)],
       ]);
-    } else {
+    } else if (text === ACTION.VERBALE_ANLEITUNG) {
+      setMoodText([
+        moodText +
+        verbaleanleitungstext[Math.floor(Math.random() * verbaleanleitungstext.length)],
+      ]);
+    }else {
       setMoodText([
         moodText +
         unterstützungstext[Math.floor(Math.random() * unterstützungstext.length)],
@@ -86,32 +92,38 @@ const Measures = () => {
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={sad}
+          icon={diagram}
           text={ACTION.STRUKTURANGABE}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={confirmation}
+          icon={speak}
           disable={disablebutton}
           text={ACTION.GESPRAECH}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={angry}
+          icon={consulting}
           text={ACTION.EINZELSETTING_BETREUT}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={worried}
+          icon={observer}
           text={ACTION.BEOBACHTUNG}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={sleepy}
+          icon={support}
           text={ACTION.UNTERSTUETZUNG}
+          disable={disablebutton}
+          onSelect={selectMoodHandler}
+        />
+        <ButtonElement
+          icon={instruction}
+          text={ACTION.VERBALE_ANLEITUNG}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />

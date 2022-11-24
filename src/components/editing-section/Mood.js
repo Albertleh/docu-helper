@@ -7,6 +7,16 @@ import sleepy from "../../assets/mood-sleepy.png";
 import worried from "../../assets/mood-worried.png";
 import relaxed from "../../assets/mood-relaxed.png";
 import angry from "../../assets/mood-angry.png";
+import handshake from "../../assets/handshake.png";
+import megaphone from "../../assets/megaphone.png";
+import nature from "../../assets/nature.png";
+import talkative from "../../assets/talkative.png";
+import prediction from "../../assets/prediction.png";
+import nervous from "../../assets/nervous.png";
+import energy from "../../assets/energy.png";
+import support from "../../assets/support.png";
+import smartphone from "../../assets/smartphone.png";
+
 
 import { moodTextContext } from "../../Helpers/Context";
 import { nameContext } from "../../Helpers/Context";
@@ -207,49 +217,49 @@ const Mood = () => {
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={relaxed}
+          icon={talkative}
           text={ACTION.GESPRAECHIG}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={relaxed}
+          icon={handshake}
           text={ACTION.HILFSBEREIT}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={relaxed}
+          icon={energy}
           text={ACTION.ANGETRIEBEN}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={relaxed}
+          icon={nervous}
           text={ACTION.NERVOES}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={relaxed}
+          icon={nature}
           text={ACTION.DRAUSSEN_AUFHALTEND}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={relaxed}
+          icon={smartphone}
           text={ACTION.HANDY_EINSTELLUNGEN}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={relaxed}
+          icon={megaphone}
           text={ACTION.LAUT}
           disable={disablebutton}
           onSelect={selectMoodHandler}
         />
         <ButtonElement
-          icon={relaxed}
+          icon={prediction}
           text={ACTION.SCHWANKENDE_GEFUEHLE}
           disable={disablebutton}
           onSelect={selectMoodHandler}
