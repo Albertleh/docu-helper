@@ -20,9 +20,9 @@ const Measures = () => {
   const strukturtext = [`${name} benötigt heute vermehrt Strukturmaßnahmen durh das Betreuerteam, was sich auch als Wirkungsvoll zeigt. `];
   const gespraechtext = [`Heute braucht es bei ${name} ein Einzelgespräch, um die Anforderungen des Betreuerteams mit den Anliegen von ${name} zu vereinbaren . `];
   const einzelsettingtext = [`${name} benötigt heute viel Betreuung im Einzelsetting, wodurch die Anforderungen des Klienten wahr genommen werden konnten. `];
-  const beobachtungstext = [`Ebenfalls zu erwähnen ist, dass sich ${name} heute sehr ruhig verhielt und die Zeit über in einem allgemein entspannten Zustand verweilt. `];
-  const unterstützungstext = [`${name}'s Aggression gegenüber anderen Klienten war heute kaum zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken und Handgriffe befeuert wurde. `];
-  const verbaleanleitungstext = [`${name}'s Aggression gegenüber anderen Klienten war heute kaum zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken und Handgriffe befeuert wurde. `];
+  const beobachtungstext = [`${name} braucht heute Vormittag außerdem akribische Beobachtung, um ${name}'s Wohlsein zu gewährleisten. `];
+  const unterstützungstext = [`${name} benötigt heute viel Unterstützung durch das Betreuerteam, da an diesem Vormittag die Alltagstätigkeiten schwer bewältigbar sind. `];
+  const verbaleanleitungstext = [`${name} benötigt diesen Vormittag vermehrt verbale Anleitung beim Ausführen diverser Aufgaben durch das Betreuerteam `];
 
   let disablebutton = true;
   if ( name.length == 0 ) {
