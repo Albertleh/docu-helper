@@ -17,9 +17,9 @@ const Measures = () => {
   const { name } = useContext(nameContext);
 
   const basalstimulationtext = [`${name} benötigt heute basale Stimulation zur Beruhigung. Dies zeigte Wirkung und verhalf zur Entspannung. `];
-  const strukturtext = [`Ebenfalls suchte ${name} zunehmend Bestätigung von dem Betreuerteam und stellt sich öfters selbst in Frage. `];
-  const gespraechtext = [`Außerdem wirkte ${name} während den frühen Stunden ein wenig traurig, was auf die isolierende Gestikulierung zurückzuführen war. `];
-  const einzelsettingtext = [`Abgesehen davon wirkte ${name} die ganze Zeit über ein wenig betrübt und gestikulierte sich besorgt. `];
+  const strukturtext = [`${name} benötigt heute vermehrt Strukturmaßnahmen durh das Betreuerteam, was sich auch als Wirkungsvoll zeigt. `];
+  const gespraechtext = [`Heute braucht es bei ${name} ein Einzelgespräch, um die Anforderungen des Betreuerteams mit den Anliegen von ${name} zu vereinbaren . `];
+  const einzelsettingtext = [`${name} benötigt heute viel Betreuung im Einzelsetting, wodurch die Anforderungen des Klienten wahr genommen werden konnten. `];
   const beobachtungstext = [`Ebenfalls zu erwähnen ist, dass sich ${name} heute sehr ruhig verhielt und die Zeit über in einem allgemein entspannten Zustand verweilt. `];
   const unterstützungstext = [`${name}'s Aggression gegenüber anderen Klienten war heute kaum zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken und Handgriffe befeuert wurde. `];
   const verbaleanleitungstext = [`${name}'s Aggression gegenüber anderen Klienten war heute kaum zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken und Handgriffe befeuert wurde. `];
@@ -81,7 +81,7 @@ const Measures = () => {
   };
   return (
     <React.Fragment>
-      <div className=" mood-text text-slate-300 font-bold text-2xl">
+      <div className=" mood-text text-slate-300 font-bold text-2xl mb-2">
         Pädagogische Maßnahmen
       </div>
       <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
