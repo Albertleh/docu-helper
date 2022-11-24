@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.389a0988.css",
-    "main.js": "/static/js/main.0d7774b7.js",
+    "main.css": "/static/css/main.0ae5f8b0.css",
+    "main.js": "/static/js/main.87d3b64c.js",
     "static/js/787.b3c02f73.chunk.js": "/static/js/787.b3c02f73.chunk.js",
     "static/media/sad.png": "/static/media/sad.821cf21437efb04d4734.png",
     "static/media/happy.png": "/static/media/happy.1016fef8750efa0288bb.png",
@@ -13,22 +13,34 @@
     "static/media/mood-angry.png": "/static/media/mood-angry.e76247832201c547f1c2.png",
     "static/media/mood-worried.png": "/static/media/mood-worried.8f68019bac23c923676f.png",
     "static/media/mood-sleepy.png": "/static/media/mood-sleepy.13ddc28a83b1ea0bbf1d.png",
+    "static/media/paint.png": "/static/media/paint.5be5e4675f82d91eb9f3.png",
     "static/media/mood-annoyed.png": "/static/media/mood-annoyed.fab0b8deca81d312b82d.png",
+    "static/media/instruction.png": "/static/media/instruction.4cf4a0ec4a765da44865.png",
     "static/media/mood-confirmation.png": "/static/media/mood-confirmation.cd2e5147ae465b388dc7.png",
+    "static/media/nature.png": "/static/media/nature.bb765be1cfc3b97ed685.png",
     "static/media/mirror.png": "/static/media/mirror.9cd27988565ca524da7e.png",
+    "static/media/observer.png": "/static/media/observer.e318f7b210407e1ba552.png",
+    "static/media/support.png": "/static/media/support.a702d2ac2bbd348fa52d.png",
+    "static/media/handshake.png": "/static/media/handshake.400b662b27182800f62b.png",
     "static/media/broom.png": "/static/media/broom.72fd864be8f160210105.png",
+    "static/media/nervous.png": "/static/media/nervous.33324b659d18c53ca54c.png",
     "static/media/walk.png": "/static/media/walk.048bc9076ca1ca7d2e42.png",
+    "static/media/energy.png": "/static/media/energy.70c95ffabda08762a078.png",
+    "static/media/prediction.png": "/static/media/prediction.0d0f9c6751fccbe60ae1.png",
+    "static/media/speak.png": "/static/media/speak.0048030c898f28d5d4c1.png",
     "static/media/recycle-bin.png": "/static/media/recycle-bin.201b5c153498691194ac.png",
+    "static/media/talkative.png": "/static/media/talkative.31bf68a3ff54e7966499.png",
+    "static/media/consulting.png": "/static/media/consulting.64e690451f8c9c1241f5.png",
     "static/media/hand.png": "/static/media/hand.ca9e159765f78636f9c6.png",
     "static/media/kaffee.png": "/static/media/kaffee.6f0a70168b157203d75f.png",
     "static/media/tupperware.png": "/static/media/tupperware.f9c30d6fbc807de573e6.png",
     "index.html": "/index.html",
-    "main.389a0988.css.map": "/static/css/main.389a0988.css.map",
-    "main.0d7774b7.js.map": "/static/js/main.0d7774b7.js.map",
+    "main.0ae5f8b0.css.map": "/static/css/main.0ae5f8b0.css.map",
+    "main.87d3b64c.js.map": "/static/js/main.87d3b64c.js.map",
     "787.b3c02f73.chunk.js.map": "/static/js/787.b3c02f73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.389a0988.css",
-    "static/js/main.0d7774b7.js"
+    "static/css/main.0ae5f8b0.css",
+    "static/js/main.87d3b64c.js"
   ]
 }
