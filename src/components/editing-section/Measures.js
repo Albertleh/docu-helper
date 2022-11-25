@@ -68,6 +68,7 @@ const Measures = () => {
         icon={item[1]}
         disable={disablebutton}
         onSelect={selectMoodHandler}
+        key={Math.random()}
       />
     );
   });
@@ -77,7 +78,7 @@ const Measures = () => {
       <div className=" mood-text text-slate-300 font-bold text-2xl mb-2">
         Pädagogische Maßnahmen
       </div>
-      <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
+      <div className="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
         {content}
       </div>
     </React.Fragment>

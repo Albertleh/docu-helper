@@ -144,6 +144,7 @@ const Mood = () => {
         icon={item[1]}
         disable={disablebutton}
         onSelect={selectMoodHandler}
+        key={Math.random()}
       />
     );
   });
@@ -153,7 +154,7 @@ const Mood = () => {
       <div className=" mood-text text-slate-300 font-bold text-2xl">
         Stimmungen
       </div>
-      <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8">
+      <div className="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8">
         {content}
       </div>
     </React.Fragment>

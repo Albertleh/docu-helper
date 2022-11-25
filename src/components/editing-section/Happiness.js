@@ -52,6 +52,7 @@ const Happiness = () => {
   const { setMoodText } = useContext(moodTextContext);
 
   const selectMoodHandler = (text) => {
+    console.log(text.trim());
     if (text === ITEMS[0][0]) {
       setMoodText(veryhappytext[Math.floor(Math.random() * veryhappytext.length)]);
     } else if (text === ITEMS[1][0]) {
@@ -74,6 +75,7 @@ const Happiness = () => {
         icon={item[1]}
         disable={disablebutton}
         onSelect={selectMoodHandler}
+        key={Math.random()}
       />
     );
   });
@@ -83,7 +85,7 @@ const Happiness = () => {
       <div className="mood-text text-slate-300 font-bold text-2xl">
         Zufriedenheit
       </div>
-      <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+      <div className="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {content}
       </div>
     </React.Fragment>

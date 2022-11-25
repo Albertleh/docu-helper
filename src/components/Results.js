@@ -3,12 +3,12 @@ import { moodTextContext, nameContext } from "../Helpers/Context";
 
 const Results = (props) => {
 
-  const {moodText, setMoodText} = useContext(moodTextContext);
+  const {setMoodText} = useContext(moodTextContext);
   const { name } = useContext(nameContext);
 
   let disabledstyles = '';
   let disablebutton = true;
-  if ( name.length == 0 ) {
+  if ( name.length === 0 ) {
     disablebutton = true;
     disabledstyles = " brightness-50 hover:bg-gray-900";
   } else if ( name.length > 0 ) {
