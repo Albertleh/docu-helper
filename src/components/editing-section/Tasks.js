@@ -37,74 +37,55 @@ const Tasks = () => {
     disablebutton = false;
   }
 
-  const ACTION = {
-    KAFFEE_GEMACHT: "Kaffee gemacht",
-    MUELL_RAUSGETRAGEN: "Müll rausgetragen",
-    HAT_AUFGERAEUMT: "hat aufgeräumt",
-    GRUPPENGESCHEHEN_TEILGENOMMEN: "Geschehen teilgenommen",
-    BOTENGAENGE_ERLEDIGT: "Botengänge erledigt",
-    JAUSENBOX_RUNTERGETRAGEN: "Jausenbox runtergetragen",
-    SELBSTBESCHAEFTIGUNG: "selbst beschäftigt",
-    TUERDIENST: "Türdienst",
-    KUENSTLERISCHE_TAETIGKEIT: "künstlerische Tätigkeit",
-    RAUCHEN: "Rauchen",
-  };
+  const ITEMS = [
+    ["Kaffee gemacht", kaffee],
+    ["Müll rausgetragen", recyclebin],
+    ["hat aufgeräumt", broom],
+    ["Geschehen teilgenommen", hand],
+    ["Botengänge erledigt", walk],
+    ["Jausenbox runtergetragen", tupperware],
+    ["selbst beschäftigt", mirror],
+    ["Türdienst", door],
+    ["Rauchen", smoking],
+    ["künstlerische Tätigkeit", paint],
+  ];
 
   const selectMoodHandler = (text) => {
-    if (text === ACTION.KAFFEE_GEMACHT) {
-      setMoodText([
-        moodText +
-        makingcoffeetext[Math.floor(Math.random() * makingcoffeetext.length)],
-      ]);
-    } else if (text === ACTION.MUELL_RAUSGETRAGEN) {
-      setMoodText([
-        moodText +
-        takingouttrashtext[Math.floor(Math.random() * takingouttrashtext.length)],
-      ]);
-    } else if (text === ACTION.HAT_AUFGERAEUMT) {
-      setMoodText([
-        moodText +
-        cleaningtext[Math.floor(Math.random() * cleaningtext.length)],
-      ]);
-    } else if (text === ACTION.GRUPPENGESCHEHEN_TEILGENOMMEN) {
-      setMoodText([
-        moodText +
-        participatingtext[Math.floor(Math.random() * participatingtext.length)],
-      ]);
-    } else if (text === ACTION.BOTENGAENGE_ERLEDIGT) {
-      setMoodText([
-        moodText +
-        carrytext[Math.floor(Math.random() * carrytext.length)],
-      ]);
-    } else if (text === ACTION.JAUSENBOX_RUNTERGETRAGEN) {
-      setMoodText([
-        moodText +
-        carryluchboxtext[Math.floor(Math.random() * carryluchboxtext.length)],
-      ]);
-    } else if (text === ACTION.SELBSTBESCHAEFTIGUNG) {
-      setMoodText([
-        moodText +
-        selfoccupationtext[Math.floor(Math.random() * selfoccupationtext.length)],
-      ]);
-    } else if (text === ACTION.TUERDIENST) {
-      setMoodText([
-        moodText +
-        doorservicetext[Math.floor(Math.random() * doorservicetext.length)],
-      ]);
-    } else if (text === ACTION.RAUCHEN) {
-      setMoodText([
-        moodText +
-        smokingtext[Math.floor(Math.random() * smokingtext.length)],
-      ]);
-    } else if (text === ACTION.KUENSTLERISCHE_TAETIGKEIT) {
-      setMoodText([
-        moodText +
-        artistictext[Math.floor(Math.random() * artistictext.length)],
-      ]);
+    if (text === ITEMS[0][0]) {
+      setMoodText([moodText + makingcoffeetext[Math.floor(Math.random() * makingcoffeetext.length)]]);
+    } else if (text === ITEMS[1][0]) {
+      setMoodText([moodText + takingouttrashtext[Math.floor(Math.random() * takingouttrashtext.length)]]);
+    } else if (text === ITEMS[2][0]) {
+      setMoodText([moodText + cleaningtext[Math.floor(Math.random() * cleaningtext.length)]]);
+    } else if (text === ITEMS[3][0]) {
+      setMoodText([moodText + participatingtext[Math.floor(Math.random() * participatingtext.length)]]);
+    } else if (text === ITEMS[4][0]) {
+      setMoodText([moodText + carrytext[Math.floor(Math.random() * carrytext.length)]]);
+    } else if (text === ITEMS[5][0]) {
+      setMoodText([moodText + carryluchboxtext[Math.floor(Math.random() * carryluchboxtext.length)]]);
+    } else if (text === ITEMS[6][0]) {
+      setMoodText([moodText + selfoccupationtext[Math.floor(Math.random() * selfoccupationtext.length)]]);
+    } else if (text === ITEMS[7][0]) {
+      setMoodText([moodText + doorservicetext[Math.floor(Math.random() * doorservicetext.length)]]);
+    } else if (text === ITEMS[8][0]) {
+      setMoodText([moodText + smokingtext[Math.floor(Math.random() * smokingtext.length)]]);
+    } else if (text === ITEMS[9][0]) {
+      setMoodText([ moodText + artistictext[Math.floor(Math.random() * artistictext.length)]]);
     } else {
-      alert('error')
+      alert('error text doesnt match!');
     }
   };
+
+  let content = ITEMS.map((item) => {
+    return (
+      <ButtonElement
+        text={item[0]}
+        icon={item[1]}
+        disable={disablebutton}
+        onSelect={selectMoodHandler}
+      />
+    );
+  });
 
   return (
     <React.Fragment>
@@ -112,66 +93,7 @@ const Tasks = () => {
         Aufgaben
       </div>
       <div class="m-3 grid lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8">
-        <ButtonElement
-          icon={kaffee}
-          text={ACTION.KAFFEE_GEMACHT}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={recyclebin}
-          text={ACTION.MUELL_RAUSGETRAGEN}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={broom}
-          text={ACTION.HAT_AUFGERAEUMT}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={hand}
-          text={ACTION.GRUPPENGESCHEHEN_TEILGENOMMEN}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={walk}
-          text={ACTION.BOTENGAENGE_ERLEDIGT}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={tupperware}
-          text={ACTION.JAUSENBOX_RUNTERGETRAGEN}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={mirror}
-          text={ACTION.SELBSTBESCHAEFTIGUNG}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={door}
-          text={ACTION.TUERDIENST}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={paint}
-          text={ACTION.KUENSTLERISCHE_TAETIGKEIT}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={smoking}
-          text={ACTION.RAUCHEN}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
+        {content}
       </div>
     </React.Fragment>
   );

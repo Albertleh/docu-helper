@@ -16,7 +16,6 @@ import nervous from "../../assets/nervous.png";
 import energy from "../../assets/energy.png";
 import smartphone from "../../assets/smartphone.png";
 
-
 import { moodTextContext } from "../../Helpers/Context";
 import { nameContext } from "../../Helpers/Context";
 import ButtonElement from "./ButtonElement";
@@ -45,6 +44,9 @@ const Mood = () => {
   ];
   const angrytext = [
     `${name}'s Aggression gegenüber anderen Klienten war heute kaum zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken und Handgriffe befeuert wurde. `,
+  ];
+  const autoangrytext = [
+    `${name} war am über den Tag verteilt immer wieder Autoaggressiv und verletzte sich selbst. `,
   ];
   const gespraechigtext = [
     `${name} ist heute sehr gesprächig und teilte Fakten rund um das eigene geistige und körperliche Wohlbefinden sowohl mit den Betreuern als auch mit anderen Klienten . `,
@@ -78,191 +80,81 @@ const Mood = () => {
     disablebutton = false;
   }
 
-  const ACTION = {
-    GENERVT: "genervt",
-    SUCHT_BESTAETIGUNG: "sucht Bestätigung",
-    TRAURIG: "traurig",
-    BESORGT: "besorgt",
-    SAUER: "fremd- aggressiv",
-    AUTOAGGRESSIV: "auto- aggressiv",
-    SCHLAEFRIG: "schläfrig",
-    ENTSPANNT: "entspannt",
-    GESPRAECHIG: "gesprächig",
-    HILFSBEREIT: "hilfsbereit",
-    ANGETRIEBEN: "angetrieben",
-    NERVOES: "nervös",
-    HANDY_EINSTELLUNGEN: "Handy Einstellungen",
-    DRAUSSEN_AUFHALTEND: "Draußen Aufhaltend",
-    LAUT: "laut",
-    SCHWANKENDE_GEFUEHLE: "schwankende Gefühle",
-  };
+  const ITEMS = [
+    ["genervt", annoyed],
+    ["sucht Bestätigung", confirmation],
+    ["traurig", sad],
+    ["entspannt", relaxed],
+    ["fremd- aggressiv", angry],
+    ["auto- aggressiv", angry],
+    ["besorgt", worried],
+    ["schläfrig", sleepy],
+    ["gesprächig", talkative],
+    ["hilfsbereit", handshake],
+    ["angetrieben", energy],
+    ["nervös", nervous],
+    ["Handy Einstellungen", smartphone],
+    ["Draußen Aufhaltend", nature],
+    ["laut", megaphone],
+    ["schwankende Gefühle", prediction],
+  ];
 
   const selectMoodHandler = (text) => {
-    if (text === ACTION.GENERVT) {
-      setMoodText([
-        moodText + annoyedtext[Math.floor(Math.random() * annoyedtext.length)],
-      ]);
-    } else if (text === ACTION.SUCHT_BESTAETIGUNG) {
-      setMoodText([
-        moodText +
-          confirmationtext[Math.floor(Math.random() * confirmationtext.length)],
-      ]);
-    } else if (text === ACTION.TRAURIG) {
-      setMoodText([
-        moodText + sadtext[Math.floor(Math.random() * sadtext.length)],
-      ]);
-    } else if (text === ACTION.ENTSPANNT) {
-      setMoodText([
-        moodText + relaxedtext[Math.floor(Math.random() * relaxedtext.length)],
-      ]);
-    } else if (text === ACTION.SAUER) {
-      setMoodText([
-        moodText + angrytext[Math.floor(Math.random() * angrytext.length)],
-      ]);
-    } else if (text === ACTION.SCHLAEFRIG) {
-      setMoodText([
-        moodText + sleepytext[Math.floor(Math.random() * sleepytext.length)],
-      ]);
-    } else if (text === ACTION.BESORGT) {
-      setMoodText([
-        moodText + worriedtext[Math.floor(Math.random() * worriedtext.length)],
-      ]);
-    } else if (text === ACTION.GESPRAECHIG) {
-      setMoodText([
-        moodText + gespraechigtext[Math.floor(Math.random() * gespraechigtext.length)],
-      ]);
-    } else if (text === ACTION.HILFSBEREIT) {
-      setMoodText([
-        moodText + hilfsbereittext[Math.floor(Math.random() * hilfsbereittext.length)],
-      ]);
-    } else if (text === ACTION.ANGETRIEBEN) {
-      setMoodText([
-        moodText + angetriebentext[Math.floor(Math.random() * angetriebentext.length)],
-      ]);
-    } else if (text === ACTION.NERVOES) {
-      setMoodText([
-        moodText + nervoestext[Math.floor(Math.random() * nervoestext.length)],
-      ]);
-    } else if (text === ACTION.HANDY_EINSTELLUNGEN) {
-      setMoodText([
-        moodText + handyeinstellungentext[Math.floor(Math.random() * handyeinstellungentext.length)],
-      ]);
-    } else if (text === ACTION.DRAUSSEN_AUFHALTEND) {
-      setMoodText([
-        moodText + draussenaufhaltendtext[Math.floor(Math.random() * draussenaufhaltendtext.length)],
-      ]);
-    } else if (text === ACTION.LAUT) {
-      setMoodText([
-        moodText + lauttext[Math.floor(Math.random() * lauttext.length)],
-      ]);
+    if (text === ITEMS[0][0]) {
+      setMoodText([moodText + annoyedtext[Math.floor(Math.random() * annoyedtext.length)]]);
+    } else if (text === ITEMS[1][0]) {
+      setMoodText([moodText + confirmationtext[Math.floor(Math.random() * confirmationtext.length)]]);
+    } else if (text === ITEMS[2][0]) {
+      setMoodText([moodText + sadtext[Math.floor(Math.random() * sadtext.length)]]);
+    } else if (text === ITEMS[3][0]) {
+      setMoodText([moodText + relaxedtext[Math.floor(Math.random() * relaxedtext.length)]]);
+    } else if (text === ITEMS[4][0]) {
+      setMoodText([moodText + angrytext[Math.floor(Math.random() * angrytext.length)]]);
+    } else if (text === ITEMS[5][0]) {
+      setMoodText([moodText + autoangrytext[Math.floor(Math.random() * angrytext.length)]]);
+    } else if (text === ITEMS[6][0]) {
+      setMoodText([moodText + worriedtext[Math.floor(Math.random() * worriedtext.length)]]);
+    } else if (text === ITEMS[7][0]) {
+      setMoodText([moodText + sleepytext[Math.floor(Math.random() * sleepytext.length)]]);
+    } else if (text === ITEMS[8][0]) {
+      setMoodText([moodText + gespraechigtext[Math.floor(Math.random() * gespraechigtext.length)]]);
+    } else if (text === ITEMS[9][0]) {
+      setMoodText([moodText + hilfsbereittext[Math.floor(Math.random() * hilfsbereittext.length)]]);
+    } else if (text === ITEMS[10][0]) {
+      setMoodText([moodText + angetriebentext[Math.floor(Math.random() * angetriebentext.length)]]);
+    } else if (text === ITEMS[11][0]) {
+      setMoodText([ moodText + nervoestext[Math.floor(Math.random() * nervoestext.length)]]);
+    } else if (text === ITEMS[12][0]) {
+      setMoodText([moodText + handyeinstellungentext[Math.floor(Math.random() * handyeinstellungentext.length)]]);
+    } else if (text === ITEMS[13][0]) {
+      setMoodText([moodText + draussenaufhaltendtext[Math.floor(Math.random() * draussenaufhaltendtext.length)]]);
+    } else if (text === ITEMS[14][0]) {
+      setMoodText([moodText + lauttext[Math.floor(Math.random() * lauttext.length)]]);
+    } else if (text === ITEMS[15][0]) {
+      setMoodText([moodText + schwankendegefuehletext[Math.floor(Math.random() * schwankendegefuehletext.length)]]);
     } else {
-      setMoodText([
-        moodText + schwankendegefuehletext[Math.floor(Math.random() * schwankendegefuehletext.length)],
-      ]);
+      alert('error text doesnt match!');
     }
   };
+
+  let content = ITEMS.map((item) => {
+    return (
+      <ButtonElement
+        text={item[0]}
+        icon={item[1]}
+        disable={disablebutton}
+        onSelect={selectMoodHandler}
+      />
+    );
+  });
+
   return (
     <React.Fragment>
       <div className=" mood-text text-slate-300 font-bold text-2xl">
         Stimmungen
       </div>
       <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8">
-        <ButtonElement
-          icon={annoyed}
-          text={ACTION.GENERVT}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={sad}
-          text={ACTION.TRAURIG}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={confirmation}
-          disable={disablebutton}
-          text={ACTION.SUCHT_BESTAETIGUNG}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={angry}
-          text={ACTION.SAUER}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={angry}
-          text={ACTION.AUTOAGGRESSIV}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={worried}
-          text={ACTION.BESORGT}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={sleepy}
-          text={ACTION.SCHLAEFRIG}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={relaxed}
-          text={ACTION.ENTSPANNT}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={talkative}
-          text={ACTION.GESPRAECHIG}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={handshake}
-          text={ACTION.HILFSBEREIT}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={energy}
-          text={ACTION.ANGETRIEBEN}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={nervous}
-          text={ACTION.NERVOES}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={nature}
-          text={ACTION.DRAUSSEN_AUFHALTEND}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={smartphone}
-          text={ACTION.HANDY_EINSTELLUNGEN}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={megaphone}
-          text={ACTION.LAUT}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={prediction}
-          text={ACTION.SCHWANKENDE_GEFUEHLE}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
+        {content}
       </div>
     </React.Fragment>
   );

@@ -11,11 +11,11 @@ import verysad from "../../assets/very-sad.png";
 
 const Happiness = () => {
   const ITEMS = [
-    ["Sehr Gut", "../../assets/very-happy.png"],
-    ["Gut", "../../assets/happy.png"],
-    ["Neutral", "../../assets/neutral.png"],
-    ["Schlecht", "../../assets/sad.png"],
-    ["Sehr Schlecht", "../../assets/very-sad.png"],
+    ["Sehr Gut", veryhappy],
+    ["Gut", happy],
+    ["Neutral", neutral],
+    ["Schlecht", sad],
+    ["Sehr Schlecht", verysad],
   ];
 
   const { name } = useContext(nameContext);
@@ -53,17 +53,17 @@ const Happiness = () => {
 
   const selectMoodHandler = (text) => {
     if (text === ITEMS[0][0]) {
-      setMoodText(
-        veryhappytext[Math.floor(Math.random() * veryhappytext.length)]
-      );
+      setMoodText(veryhappytext[Math.floor(Math.random() * veryhappytext.length)]);
     } else if (text === ITEMS[1][0]) {
       setMoodText(happytext[Math.floor(Math.random() * happytext.length)]);
     } else if (text === ITEMS[2][0]) {
       setMoodText(neutraltext[Math.floor(Math.random() * neutraltext.length)]);
     } else if (text === ITEMS[3][0]) {
       setMoodText(sadtext[Math.floor(Math.random() * sadtext.length)]);
-    } else {
+    } else if (text === ITEMS[4][0]) {
       setMoodText(verysadtext[Math.floor(Math.random() * verysadtext.length)]);
+    } else {
+      alert('error text doesnt match!');
     }
   };
 

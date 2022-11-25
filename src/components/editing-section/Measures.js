@@ -31,102 +31,54 @@ const Measures = () => {
     disablebutton = false;
   }
 
-  const ACTION = {
-    BASALE_STIMULATION: "basale Stimulation",
-    STRUKTURANGABE: "klare Strukturangabe",
-    GESPRAECH: "klärendes Gespräch",
-    EINZELSETTING_BETREUT: "Einzelsetting betreut",
-    BEOBACHTUNG: "vermehrte Beobachtung",
-    UNTERSTUETZUNG: "Unterstützung",
-    VERBALE_ANLEITUNG: "verbale Anleitung",
-  };
+  const ITEMS = [
+    ["basale Stimulation", caress],
+    ["klare Strukturangabe", diagram],
+    ["klärendes Gespräch", speak],
+    ["Einzelsetting betreut", consulting],
+    ["vermehrte Beobachtung", observer],
+    ["verbale Anleitung", instruction],
+    ["Unterstützung", support],
+  ];
 
   const selectMoodHandler = (text) => {
-    if (text === ACTION.BASALE_STIMULATION) {
-      setMoodText([
-        moodText + 
-        basalstimulationtext[Math.floor(Math.random() * basalstimulationtext.length)],
-      ]);
-    } else if (text === ACTION.STRUKTURANGABE) {
-      setMoodText([
-        moodText +
-        strukturtext[Math.floor(Math.random() * strukturtext.length)],
-      ]);
-    } else if (text === ACTION.GESPRAECH) {
-      setMoodText([
-        moodText +
-        gespraechtext[Math.floor(Math.random() * gespraechtext.length)],
-      ]);
-    } else if (text === ACTION.EINZELSETTING_BETREUT) {
-      setMoodText([
-        moodText +
-        einzelsettingtext[Math.floor(Math.random() * einzelsettingtext.length)],
-      ]);
-    } else if (text === ACTION.BEOBACHTUNG) {
-      setMoodText([
-        moodText +
-        beobachtungstext[Math.floor(Math.random() * beobachtungstext.length)],
-      ]);
-    } else if (text === ACTION.VERBALE_ANLEITUNG) {
-      setMoodText([
-        moodText +
-        verbaleanleitungstext[Math.floor(Math.random() * verbaleanleitungstext.length)],
-      ]);
-    }else {
-      setMoodText([
-        moodText +
-        unterstützungstext[Math.floor(Math.random() * unterstützungstext.length)],
-      ]);
+    if (text === ITEMS[0][0]) {
+      setMoodText([moodText + basalstimulationtext[Math.floor(Math.random() * basalstimulationtext.length)]]);
+    } else if (text === ITEMS[1][0]) {
+      setMoodText([moodText + strukturtext[Math.floor(Math.random() * strukturtext.length)]]);
+    } else if (text === ITEMS[2][0]) {
+      setMoodText([moodText + gespraechtext[Math.floor(Math.random() * gespraechtext.length)]]);
+    } else if (text === ITEMS[3][0]) {
+      setMoodText([moodText + einzelsettingtext[Math.floor(Math.random() * einzelsettingtext.length)]]);
+    } else if (text === ITEMS[4][0]) {
+      setMoodText([moodText + beobachtungstext[Math.floor(Math.random() * beobachtungstext.length)]]);
+    } else if (text === ITEMS[5][0]) {
+      setMoodText([moodText + verbaleanleitungstext[Math.floor(Math.random() * verbaleanleitungstext.length)]]);
+    } else if (text === ITEMS[6][0]) {
+      setMoodText([moodText + unterstützungstext[Math.floor(Math.random() * unterstützungstext.length)]]);
+    } else {
+      alert('error text doesnt match!');
     }
   };
+
+  let content = ITEMS.map((item) => {
+    return (
+      <ButtonElement
+        text={item[0]}
+        icon={item[1]}
+        disable={disablebutton}
+        onSelect={selectMoodHandler}
+      />
+    );
+  });
+
   return (
     <React.Fragment>
       <div className=" mood-text text-slate-300 font-bold text-2xl mb-2">
         Pädagogische Maßnahmen
       </div>
       <div class="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
-        <ButtonElement
-          icon={caress}
-          text={ACTION.BASALE_STIMULATION}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={diagram}
-          text={ACTION.STRUKTURANGABE}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={speak}
-          disable={disablebutton}
-          text={ACTION.GESPRAECH}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={consulting}
-          text={ACTION.EINZELSETTING_BETREUT}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={observer}
-          text={ACTION.BEOBACHTUNG}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={support}
-          text={ACTION.UNTERSTUETZUNG}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
-        <ButtonElement
-          icon={instruction}
-          text={ACTION.VERBALE_ANLEITUNG}
-          disable={disablebutton}
-          onSelect={selectMoodHandler}
-        />
+        {content}
       </div>
     </React.Fragment>
   );
