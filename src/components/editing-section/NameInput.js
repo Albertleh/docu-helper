@@ -30,7 +30,7 @@ const NameInput = () => {
     <div className="pt-5 sm:pt-6 sm:mb-5 sm:ml-5 text-2xl sm:text-lg text-white flex flex-col sm:flex-row sm:justify-center items-center sm:items-center  ">
       <span className={"mb-5 sm:mb-0" + validtextstyles}>Name des Klienten:</span>
       <input ref={inputref} type="text" onChange={NameConfirmHandler} 
-        className={"py-1 px-2 mb-5 sm:mb-0 sm:ml-5 rounded-lg text-gray-900" + validstyles}/>
+        className={"container py-1 px-3 sm:px-2 mb-5 sm:mb-0 sm:ml-5 rounded-lg text-gray-900" + validstyles}/>
     </div>
   );
 };
