@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { moodTextContext, nameContext } from "../Helpers/Context";
+import { moodTextContext, nameContext } from "../../Helpers/Context";
 
 const Results = (props) => {
 

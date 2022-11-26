@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
 
-import consulting from "../../assets/consulting.png";
-import diagram from "../../assets/diagram.png";
-import instruction from "../../assets/instruction.png";
-import observer from "../../assets/observer.png";
-import support from "../../assets/support.png";
-import caress from "../../assets/caress.png";
-import speak from "../../assets/speak.png";
+import consulting from "../../../assets/consulting.png";
+import diagram from "../../../assets/diagram.png";
+import instruction from "../../../assets/instruction.png";
+import observer from "../../../assets/observer.png";
+import support from "../../../assets/support.png";
+import caress from "../../../assets/caress.png";
+import speak from "../../../assets/speak.png";
 
-import { moodTextContext } from "../../Helpers/Context";
-import { nameContext } from "../../Helpers/Context";
-import ButtonElement from "./ButtonElement";
+import { moodTextContext } from "../../../Helpers/Context";
+import { nameContext } from "../../../Helpers/Context";
+import ButtonElement from "../ButtonElement";
 
 const Measures = () => {
   const { moodText, setMoodText } = useContext(moodTextContext);

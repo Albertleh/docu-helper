@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
-import { nameContext } from "../../Helpers/Context";
-import { moodTextContext } from "../../Helpers/Context";
-import ButtonElement from "./ButtonElement";
+import { nameContext } from "../../../Helpers/Context";
+import { moodTextContext } from "../../../Helpers/Context";
+import ButtonElement from "../ButtonElement";
 
-import veryhappy from "../../assets/very-happy.png";
-import happy from "../../assets/happy.png";
-import neutral from "../../assets/neutral.png";
-import sad from "../../assets/sad.png";
-import verysad from "../../assets/very-sad.png";
+import veryhappy from "../../../assets/very-happy.png";
+import happy from "../../../assets/happy.png";
+import neutral from "../../../assets/neutral.png";
+import sad from "../../../assets/sad.png";
+import verysad from "../../../assets/very-sad.png";
 
 const Happiness = () => {
   const ITEMS = [

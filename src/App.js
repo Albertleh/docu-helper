@@ -4,8 +4,8 @@ import { moodTextContext } from "./Helpers/Context";
 import { nameContext } from "./Helpers/Context";
 
 import Dokupage from "./components/editing-section/Dokupage";
-import Results from "./components/Results";
-
+import Results from "./components/results-section/Results";
+import Canvas from "./components/UI/Canvas";
 
 function App() {
   const [moodText, setMoodText] = useState("");
@@ -14,12 +14,10 @@ function App() {
   return (
     <nameContext.Provider value={{ name, setName }}>
       <moodTextContext.Provider value={{ moodText, setMoodText }}>
-        <div className="bg-slate-900 h-screen">
-          <div className="bg-slate-900 h-auto p-5">
-            <Dokupage />
-            <Results text={moodText} />
-          </div>
-        </div>
+        <Canvas>
+          <Dokupage />
+          <Results text={moodText} />
+        </Canvas>
       </moodTextContext.Provider>
     </nameContext.Provider>
   );

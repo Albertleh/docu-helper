@@ -1,10 +1,11 @@
 import React from "react";
 
-import Happiness from "./Happiness";
-import Mood from "./Mood";
+import Happiness from "./categories/Happiness";
+import Mood from "./categories/Mood";
+import Tasks from "./categories/Tasks";
+import Measures from "./categories/Measures";
+
 import NameInput from "./NameInput";
-import Tasks from "./Tasks";
-import Measures from "./Measures";
 
 const Dokupage = () => {
   return (

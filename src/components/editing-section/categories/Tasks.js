@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
 
-import broom from "../../assets/broom.png";
-import hand from "../../assets/hand.png";
-import kaffee from "../../assets/kaffee.png";
-import recyclebin from "../../assets/recycle-bin.png";
-import walk from "../../assets/walk.png";
-import tupperware from "../../assets/tupperware.png";
-import mirror from "../../assets/mirror.png";
-import smoking from "../../assets/smoking.png";
-import door from "../../assets/door.png";
-import paint from "../../assets/paint.png";
+import broom from "../../../assets/broom.png";
+import hand from "../../../assets/hand.png";
+import kaffee from "../../../assets/kaffee.png";
+import recyclebin from "../../../assets/recycle-bin.png";
+import walk from "../../../assets/walk.png";
+import tupperware from "../../../assets/tupperware.png";
+import mirror from "../../../assets/mirror.png";
+import smoking from "../../../assets/smoking.png";
+import door from "../../../assets/door.png";
+import paint from "../../../assets/paint.png";
 
-import { moodTextContext, nameContext } from "../../Helpers/Context";
-import ButtonElement from "./ButtonElement";
+import { moodTextContext, nameContext } from "../../../Helpers/Context";
+import ButtonElement from "../ButtonElement";
 
 const Tasks = () => {
   const { moodText, setMoodText } = useContext(moodTextContext);
