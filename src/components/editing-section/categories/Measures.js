@@ -16,9 +16,9 @@ const Measures = () => {
   const { moodText, setMoodText } = useContext(moodTextContext);
   const { name } = useContext(nameContext);
 
-  const basalstimulationtext = [`${name} benötigt heute basale Stimulation zur Beruhigung. Dies zeigte Wirkung und verhalf zur Entspannung. `,
-                                `Heute wurde bei ${name} basale Stimulation zur Beruhigung angewandt. `,
-                                `An diesem Vormittag benötigt ${name} basale Stimulation, welche eine entspannende Wirkung zeigte. `,];
+  const basalstimulationtext = [`${name} benötigt heute Basale Stimulation zur Beruhigung. Dies zeigte Wirkung und verhalf zur Entspannung. `,
+                                `Heute wurde bei ${name} Basale Stimulation zur Beruhigung angewandt. `,
+                                `An diesem Vormittag benötigt ${name} Basale Stimulation, welche eine entspannende Wirkung zeigte. `,];
   const strukturtext = [`${name} benötigt heute  strukturierte Maßnahmen durch das Betreuerteam, was sich auch als Wirkungsvoll zeigt. `,
                         `Heute mussten bei ${name} Maßnahmen zur Wiederherstellung der Struktur angewandt werden. `,
                         `Am Vormittag benötigt ${name} vermehrt strukturierte Maßnahmen zur Orientierung, was sich als wirksam erwies. `,];
