@@ -38,7 +38,7 @@ const Happiness = () => {
     `An diesem Vormittag wirkte ${name} generell gut aufgelegt und grüßte freundlich. `,
   ];
   const neutraltext = [
-    `${name} wirkte heute beim Betreten der Werkstätte von der Zuftriedenheit neutral. `,
+    `${name} wirkte heute beim Betreten der Werkstätte von der Zufriedenheit neutral. `,
     `${name} zeigte heute eine ausgeglichene Stimmung und wirkte allgemein neutral in seiner Zufriedenheit. `,
     `Heute wirkte ${name} sehr ausgeglichen und zeigte gemischte Gefhüle. `,
   ];
