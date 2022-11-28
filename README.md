@@ -1,5 +1,7 @@
 # Caritas Documentation Helper 
 
+https://quickdoku-97377.web.app/
+
 This tool provides Caritas caregivers with a faster and more efficient user interface for documenting behavior of clients. Using the tool the documentation process can be shortened by a large margin thus making a deficiency in typing speed less of an efficiency degrading issue. Moreover the caregivers attention span can be shifted more towards the needs of clients and less towards redundant preliminary administration measures.
 
 
