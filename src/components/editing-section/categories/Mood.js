@@ -26,21 +26,27 @@ const Mood = () => {
 
   const annoyedtext = [
     `Außerdem wirkte ${name} während des Vormittags über genervt und auch ein bisschen missverstanden. `,
+    `Heute wirkte ${name} auch ein wenig betrübt und genervt. `,
   ];
   const confirmationtext = [
     `Ebenfalls suchte ${name} zunehmend Bestätigung von dem Betreuerteam und stellt sich öfters selbst in Frage. `,
+    `Heute sucht ${name} öfters nach Bestätigung von den Betreuern und wirkt nicht besonders selbstsicher. `,
   ];
   const sadtext = [
     `Außerdem wirkte ${name} während den frühen Stunden ein wenig traurig, was auf die isolierende Gestik zurückzuführen war. `,
+    `${name} war an diesem Vormittag nicht besonders glücklich und wies immer wieder auf einige Missstände hin. `,
   ];
   const sleepytext = [
     `Zudem schien es so als hätte ${name} nicht gut oder ausreichen  geschlafen, da die Gestik (insbesodere durch Gähnen) auf Müdigkeit hinwies. `,
+    `Den ganzen Tag über wirkte ${name} nicht besonders munter, sondern ein wenig schläfrig allgemein. `,
   ];
   const worriedtext = [
     `Abgesehen davon wirkte ${name} die ganze Zeit über ein wenig betrübt und gestikulierte sich besorgt. `,
+    `Dem hinzuzufügen ist ${name} heute ein wenig besorgt und außert mehrmals diverse auftretende Bedenken. `,
   ];
   const relaxedtext = [
     `Ebenfalls zu erwähnen ist, dass sich ${name} heute sehr ruhig verhielt und die Zeit über in einem allgemein entspannten Zustand verweilt. `,
+    `${name} wirkt heute sehr relaxed und verweilt längere Zeit über in einem entspannten Zustand. `,
   ];
   const angrytext = [
     `${name}'s Aggression gegenüber anderen Klienten war heute kaum zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken und Handgriffe befeuert wurde. `,
