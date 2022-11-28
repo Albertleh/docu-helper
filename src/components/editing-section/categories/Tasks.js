@@ -18,17 +18,27 @@ const Tasks = () => {
   const { moodText, setMoodText } = useContext(moodTextContext);
   const { name } = useContext(nameContext);
 
-  const makingcoffeetext = [`Bezüglich Tätigkeiten hat ${name} heute die Aufgabe des Kaffeekochens angenommen und auch erfüllt. `];
-  const takingouttrashtext = [`Ebenfalls wurde der Müll heute von ${name} selbstständig zum Müllplatz getragen und dort entsorgt. `];
-  const cleaningtext = [`${name} war heute sehr um die Sauberkeit der Gruppe bemüht und nahm selbstbestimmt diverse Reinungstätigkeiten an. `];
-  const participatingtext = [`Außerdem ist zu betonen, dass ${name} heute sich aktiv in das Gruppengeschehen eingebracht hat und sehr proaktiv agierte. `];
-  const carrytext = [`Ebenfalls erledigte ${name} am Vormittag diverse Botengänge in die Küche. `];
-  const carryluchboxtext = [`${name} hat heute Früh die leere Jausenbox zurück in die Küche gebracht. `];
-  const selfoccupationtext = [`Lange Zeit über fand ${name} auch gute Wege, sich selbst zu beschäftigen. `]
-  const doorservicetext = [`${name} übernahm freiwillig für einige Zeit den Türdienst, um Hrn. Miedler vor sich selbst zu schützen. `]
+  const makingcoffeetext = [`Bezüglich Tätigkeiten hat ${name} heute die Aufgabe des Kaffeekochens angenommen und auch erfüllt. `, 
+                            `Heute kochte ${name} selbstständig eine Kanne Kaffee für die Gruppe. `];
+  const takingouttrashtext = [`Ebenfalls wurde der Müll heute von ${name} selbstständig zum Müllplatz getragen und dort entsorgt. `, 
+                              `Am Nachmittag wurde der Müll von ${name} rausgetragen und dort entsorgt. `];
+  const cleaningtext = [`${name} war heute sehr um die Sauberkeit der Gruppe bemüht und nahm selbstbestimmt diverse Reinungstätigkeiten an. `, 
+                        `Heute hat sich ${name} um anfallende Reinigungsarbeiten gekümmert und diese in Abstimmung mit dem Betreuerteam erledigt. `,];
+  const participatingtext = [`Außerdem ist zu betonen, dass ${name} heute sich aktiv in das Gruppengeschehen eingebracht hat. `, 
+                             `${name} hat das Gruppengeschehen beobachtet und sich eingebracht. `,
+                             `Heute hat ${name} aktiv am Gruppengeschehen teilgenommen und mit anderen Personen interagiert. `,];
+  const carrytext = [`Ebenfalls erledigte ${name} am Vormittag diverse Botengänge in die Küche. `, 
+                     `Heute verrichtete ${name} nach Aufforderung durch das Betreuerteam einige Botengänge. `,];
+  const carryluchboxtext = [`${name} hat heute Früh die leere Jausenbox zurück in die Küche gebracht. `, 
+                           `Heute brachte ${name} die Jausenbox nach dem Frühstück in die Küche zurück. `,];
+  const selfoccupationtext = [`Lange Zeit über fand ${name} auch gute Wege, sich selbst zu beschäftigen. `, 
+                              `${name} beschäftigt sich zudem für einige Zeit selbst. `, ]
+  const doorservicetext = [`${name} übernahm freiwillig für einige Zeit den Türdienst, um Hrn. Miedler vor sich selbst zu schützen. `, 
+                           `Heute sorgte sich ${name} nach Aufforderung durch das Betreuerteam mit dem Bewachen der Tür um die Sicherheit von Hrn. Miedler.  `]
   const artistictext = [`Weiters fand ${name} am Vormittag Freude am ausüben künstlerischer Tätigkeiten. `, 
                         `${name} betätigt sich für einige Zeit des Vormittags künstlerisch. `]
-  const smokingtext = [`Ebenfalls nennenswert ist, dass ${name} heute einige Zeit mit Rauchen verbrachte. `]
+  const smokingtext = [`Ebenfalls nennenswert ist, dass ${name} heute einige Zeit mit Rauchen verbrachte. `, 
+                       `${name} beschäftigte sich außerdem in einigen Pausenzeiten mit dem Rauchen. `, ]
 
   let disablebutton = true;
   if ( name.length === 0 ) {
