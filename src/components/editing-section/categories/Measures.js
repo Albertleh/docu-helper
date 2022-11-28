@@ -33,7 +33,7 @@ const Measures = () => {
                             `An diesem Tag stand ${name} immer wieder unter Beobachtung, damit bei Bedarf direkte pädagogische Maßnahmen gesetzt werden konnten. `, ];
   const unterstützungstext = [`${name} benötigt heute viel Unterstützung durch das Betreuerteam, da an diesem Vormittag die Alltagstätigkeiten schwer fallen. `, 
                               `Am heutigen Vormittag bedarf bes bei ${name} vermehrt an unterstützenden Maßnahmen, um den Tag bestreiten zu können. `,
-                              `Heute ${name} vermehrt an unterstützenden Maßnahmen, um den Tag bestreiten zu können. `, ];
+                              `Heute bedarf es bei ${name} vermehrt an unterstützenden Maßnahmen jeglicher Art. `, ];
   const verbaleanleitungstext = [`${name} benötigt diesen Vormittag verbale Anleitung beim Ausführen diverser Aufgaben durch das Betreuerteam. `,
                                  `Heute Vormittag brauchte es bei ${name} vermehrt verbale Anleitung zur Orientierung, was sich als durchaus wirksam erwies. `,
                                  `Vormittags braucht ${name} immer wieder strukturierte verbale Anleitung als roten Faden. `,];
