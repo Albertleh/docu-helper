@@ -16,13 +16,22 @@ const Measures = () => {
   const { moodText, setMoodText } = useContext(moodTextContext);
   const { name } = useContext(nameContext);
 
-  const basalstimulationtext = [`${name} benötigt heute basale Stimulation zur Beruhigung. Dies zeigte Wirkung und verhalf zur Entspannung. `];
-  const strukturtext = [`${name} benötigt heute  strukturierte Maßnahmen durch das Betreuerteam, was sich auch als Wirkungsvoll zeigt. `];
-  const gespraechtext = [`Heute braucht es bei ${name} ein Einzelgespräch, um die Anforderungen des Betreuerteams mit den Anliegen von ${name} zu vereinbaren. `];
-  const einzelsettingtext = [`${name} benötigt heute viel Betreuung im Einzelsetting, wodurch die Anforderungen des Klienten wahr genommen werden konnten. `];
+  const basalstimulationtext = [`${name} benötigt heute basale Stimulation zur Beruhigung. Dies zeigte Wirkung und verhalf zur Entspannung. `,
+                                `Heute wurde bei ${name} basale Stimulation zur Beruhigung angewandt. `,
+                                `An diesem Vormittag benötigt ${name} basale Stimulation, welche eine entspannende Wirkung zeigte. `,];
+  const strukturtext = [`${name} benötigt heute  strukturierte Maßnahmen durch das Betreuerteam, was sich auch als Wirkungsvoll zeigt. `,
+                                `Heute mussten bei ${name} Maßnahmen zur Wiederherstellung der Struktur angewandt werden. `,
+                                `Am Vormittag benötigt ${name} vermehrt strukturierte Maßnahmen zur Orientierung. `,];
+  const gespraechtext = [`Heute braucht es bei ${name} ein Einzelgespräch, um die Anforderungen des Betreuerteams mit den Anliegen von ${name} zu vereinbaren. `,
+                         `${name} benötigt diesen Vormittag ein Einzelgespräch, welches Klarheit verschafft. `,
+                         `Diesen Vormittag wurde ${name} ein Gespräch unter vier Augen angeboten, woraufhin Beschwerden und Anliegen abgeklärt werden konnten. `, ];
+  const einzelsettingtext = [`${name} benötigt heute viel Betreuung im Einzelsetting, wodurch die Anforderungen des Klienten wahr genommen werden konnten. `,
+                             `${name} benötigt heute viel Betreuung im Einzelsetting, wodurch die Anforderungen des Klienten wahr genommen werden konnten. `, ];
   const beobachtungstext = [`${name} braucht heute Vormittag außerdem akribische Beobachtung, um ${name}'s Sicherheit zu gewährleisten. `];
-  const unterstützungstext = [`${name} benötigt heute viel Unterstützung durch das Betreuerteam, da an diesem Vormittag die Alltagstätigkeiten schwer bewältigbar sind. `];
-  const verbaleanleitungstext = [`${name} benötigt diesen Vormittag verbale Anleitung beim Ausführen diverser Aufgaben durch das Betreuerteam. `];
+  const unterstützungstext = [`${name} benötigt heute viel Unterstützung durch das Betreuerteam, da an diesem Vormittag die Alltagstätigkeiten schwer fallen. `];
+  const verbaleanleitungstext = [`${name} benötigt diesen Vormittag verbale Anleitung beim Ausführen diverser Aufgaben durch das Betreuerteam. `,
+                                 `Heute Vormittag brauchte es bei ${name} vermehrt verbale Anleitung zur Orientierung. `,
+                                 `Vormittags braucht ${name} immer wieder strukturierte verbale Anleitung als roten Faden. `,];
 
   let disablebutton = true;
   if ( name.length === 0 ) {
