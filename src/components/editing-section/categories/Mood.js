@@ -50,33 +50,43 @@ const Mood = () => {
   ];
   const angrytext = [
     `${name}'s Aggression gegenüber anderen Klienten war heute kaum zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken und Handgriffe befeuert wurde. `,
+    `Heute wirkt ${name} sehr aufgebracht und zeigt sich immer wieder als agressiv. `,
   ];
   const autoangrytext = [
     `${name} war am über den Tag verteilt immer wieder Autoaggressiv und verletzte sich selbst. `,
+    `Heute verhielt sich ${name} immer wieder Autoaggressiv und gestikulierte sich aufgebracht. `,
   ];
   const gespraechigtext = [
     `${name} ist heute sehr gesprächig und teilte Fakten rund um das eigene geistige und körperliche Wohlbefinden sowohl mit den Betreuern als auch mit anderen Klienten . `,
+    `An diesem Vormittag war ${name} sehr Mitteilungsbedürftig und unterhielt sich sowohl mit Klienten als auch Betreuern. `,
   ];
   const hilfsbereittext = [
     `${name}'s Hilfsbereitschaft war am heutigen Tag deutlich zu erkennen, da dem Betreuerteam oft Unterstützung bei ihren Tätigkeiten angeboten wurde. `,
+    `Heute zeigte ${name} ausgeprägte Hilfsbereitschaft, da dem Betreuerteam immer wieder Hilfe angeboten wird. `,
   ];
   const angetriebentext = [
     `${name} wirkt heute ein wenig Sprunghaft und impulsiv, da die Gestik des öfteren darauf hinwies. ${name} pendelt öfters zwischen verschiedenen Sitzplätzen hin und her. `,
+    `Über den ganzen Vormittag vierhielt sich ${name} sehr angetrieben, konnte nicht lange an einem Platz sitzen bleiben und wirkte ein wenig nervös. `,
   ];
   const nervoestext = [
     `Nicht zuletzt zeigte ${name} am Vormittag vermehrt nervöses Verhalten. Schnelles Sprechen, unruhiges Sitzen und ruckartige Bewegungsimpulse zählten zu den Symptomen. In Folge wurden ${name} Methoden zur Stressbewältigung angeboten. `,
+    `${name} verhielt sich heute allgemein ein wenig sprunghaft und gestikulierte sich nervös. `,
   ];
   const handyeinstellungentext = [
     `${name} hatte heute Schwierigkeiten mit der Konfiguration des Smartphones. Das Betreuerteam zeigte mögliche Lösungsansätze auf, verwies jedoch ebenfalls auf das Handyverbot. `,
+    `Heute wurde ${name} bei einigen Handyeinstellungen unterstützt, jedoch gleichzeitig vom übermäßigen Konsum abgeraten. `
   ];
   const draussenaufhaltendtext = [
     `${name} hielt sich heute allgemein sehr gerne draußen am Hof auf, nachdem das Betreuerteam entsprechende Kleidung sicherstellte. Vereinzelt kam es auch draußen zur Begegnung mit Personal und Klientel außerhalb der eigenen Gruppe. `,
+    `Diesen Vormittag über hielt sich ${name} gerne immer wieder am Hof auf und hatte dort ebenfalls Kontakt zu anderen Klienten und Betreuern außerhalb der Werkstatt. `,
   ];
   const lauttext = [
     `${name}'s Unruhe war am Vormittag kaum zu überhören, da ${name} immer wieder laute Schreie und Töne von sich gab, womit periodisch verbal Unwohlsein bekanntgegeben wurde. `,
+    `Heute lautierte ${name} öfters umher und wirkte dabei sehr angespannt und nervös. Das Betreuerteam setzte daraufhin Maßnahmen zur Beruhigung`,
   ];
   const schwankendegefuehletext = [
     `${name} fiel heute am Vormittga verstärkt durch Gefühlsschwankungen auf, die die Laune prägten. Allgemein ist festzustellen, dass heute der gemütszustand von ${name} durchaus volatil ist. `,
+    `Am Vormittag wirkt ${name} ein wenig durcheinander. Die Laune von ${name} schien außerdem zu mehrmals zu schwanken. `,
   ];
 
   let disablebutton = true;
