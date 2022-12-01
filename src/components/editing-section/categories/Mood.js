@@ -57,7 +57,7 @@ const Mood = () => {
     `Heute verhielt sich ${name} immer wieder autoaggressiv und gestikulierte sich unruhig. `,
   ];
   const gespraechigtext = [
-    `${name} ist heute sehr gesprächig und teilt Fakten rund um das eigene geistige und körperliche Wohlbefinden sowohl mit den Betreuern als auch mit anderen Klienten . `,
+    `${name} ist heute sehr gesprächig und teilt Fakten rund um das eigene geistige und körperliche Wohlbefinden sowohl mit den Betreuern als auch mit anderen Klienten. `,
     `An diesem Vormittag war ${name} sehr mitteilungsbedürftig und unterhielt sich sowohl mit Klienten als auch Betreuern. `,
   ];
   const hilfsbereittext = [
