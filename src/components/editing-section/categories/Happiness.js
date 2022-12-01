@@ -40,17 +40,17 @@ const Happiness = () => {
   const neutraltext = [
     `${name} wirkte heute beim Betreten der Werkstätte von der Zufriedenheit her neutral. `,
     `${name} zeigte heute eine ausgeglichene Stimmung und wirkte allgemein neutral in seiner Zufriedenheit. `,
-    `Heute wirkte ${name} sehr ausgeglichen und zeigte gemischte Gefhüle. `,
+    `Heute wirkte ${name} sehr ausgeglichen und zeigte neutrale Laune. `,
   ];
   const sadtext = [
     `${name} kam heute betrübt in die Tagesstätte und wirkte leicht schlecht gelaunt. `,
-    `${name} betrat heute wenig zufrieden in die Tagesstätte und zeigte unglückliches Verhalten. `,
+    `${name} betrat heute wenig zufrieden die Tagesstätte und zeigte unglückliches Verhalten. `,
     `Am heutigen Tag betrat ${name} wenig gut gelaunt die Tagesstätte. `,
   ];
   const verysadtext = [
     `${name} kam heute sichtbar miserabel gelaunt in die Tagesstätte und verbalisierte immer wieder schlechte Stimmung. `,
     `${name} wirkte beim Betreten der Tagesstätte sehr schlecht gelaunt und gestikulierte sich abweisend. `,
-    `Heute betrat ${name} sichtbar schlecht gelaunt die Tagesstätte, was seine Körpersprache verdeutlichte. `,
+    `Heute betrat ${name} sichtbar schlecht gelaunt die Tagesstätte, was durch Körpersprache verdeutlicht wurde. `,
   ];
 
   const { setMoodText } = useContext(moodTextContext);

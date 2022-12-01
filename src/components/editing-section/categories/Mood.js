@@ -30,42 +30,42 @@ const Mood = () => {
   ];
   const confirmationtext = [
     `Ebenfalls suchte ${name} zunehmend Bestätigung von dem Betreuerteam und stellt sich öfters selbst in Frage. `,
-    `Heute sucht ${name} öfters nach Bestätigung von den Betreuern und wirkt nicht besonders selbstsicher. `,
+    `Heute sucht ${name} auch öfters nach Bestätigung vom Betreuern und wirkt nicht besonders selbstsicher. `,
   ];
   const sadtext = [
     `Außerdem wirkte ${name} während den frühen Stunden ein wenig traurig, was auf die isolierende Gestik zurückzuführen war. `,
     `${name} war an diesem Vormittag nicht besonders glücklich und wies immer wieder auf einige Missstände hin. `,
   ];
   const sleepytext = [
-    `Zudem schien es so als hätte ${name} nicht gut oder ausreichen  geschlafen, da die Gestik (insbesodere durch Gähnen) auf Müdigkeit hinwies. `,
+    `Zudem schien es so als hätte ${name} nicht gut oder ausreichend geschlafen, da die Gestik (insbesodere durch Gähnen) auf Müdigkeit hinwies. `,
     `Den ganzen Tag über wirkte ${name} nicht besonders munter, sondern ein wenig schläfrig allgemein. `,
   ];
   const worriedtext = [
     `Abgesehen davon wirkte ${name} die ganze Zeit über ein wenig betrübt und gestikulierte sich besorgt. `,
-    `Dem hinzuzufügen ist ${name} heute ein wenig besorgt und außert mehrmals diverse auftretende Bedenken. `,
+    `Dem hinzuzufügen ist, dass ${name} heute ein wenig besorgt ist und mehrmals diverse auftretende Bedenken außert. `,
   ];
   const relaxedtext = [
-    `Ebenfalls zu erwähnen ist, dass sich ${name} heute sehr ruhig verhielt und die Zeit über in einem allgemein entspannten Zustand verweilt. `,
+    `Ebenfalls zu erwähnen ist, dass sich ${name} heute sehr ruhig verhielt und die meißte Zeit über in einem allgemein entspannten Zustand verweilt. `,
     `${name} wirkt heute sehr relaxed und verweilt längere Zeit über in einem entspannten Zustand. `,
   ];
   const angrytext = [
     `${name}'s Aggression gegenüber anderen Klienten war heute kaum zu übersehen, da das Gruppengeschehen vermehrt durch energische Gestiken und Handgriffe befeuert wurde. `,
-    `Heute wirkt ${name} sehr aufgebracht und zeigt sich immer wieder als agressiv. `,
+    `Heute wirkt ${name} sehr aufgebracht und zeigt sich immer wieder als fremdaggressiv. `,
   ];
   const autoangrytext = [
-    `${name} war am über den Tag verteilt immer wieder Autoaggressiv und verletzte sich selbst. `,
-    `Heute verhielt sich ${name} immer wieder Autoaggressiv und gestikulierte sich aufgebracht. `,
+    `${name} war am über den Tag verteilt immer wieder autoaggressiv und verletzte sich selbst. `,
+    `Heute verhielt sich ${name} immer wieder autoaggressiv und gestikulierte sich unruhig. `,
   ];
   const gespraechigtext = [
-    `${name} ist heute sehr gesprächig und teilte Fakten rund um das eigene geistige und körperliche Wohlbefinden sowohl mit den Betreuern als auch mit anderen Klienten . `,
-    `An diesem Vormittag war ${name} sehr Mitteilungsbedürftig und unterhielt sich sowohl mit Klienten als auch Betreuern. `,
+    `${name} ist heute sehr gesprächig und teilt Fakten rund um das eigene geistige und körperliche Wohlbefinden sowohl mit den Betreuern als auch mit anderen Klienten . `,
+    `An diesem Vormittag war ${name} sehr mitteilungsbedürftig und unterhielt sich sowohl mit Klienten als auch Betreuern. `,
   ];
   const hilfsbereittext = [
     `${name}'s Hilfsbereitschaft war am heutigen Tag deutlich zu erkennen, da dem Betreuerteam oft Unterstützung bei ihren Tätigkeiten angeboten wurde. `,
     `Heute zeigte ${name} ausgeprägte Hilfsbereitschaft, da dem Betreuerteam immer wieder Hilfe angeboten wird. `,
   ];
   const angetriebentext = [
-    `${name} wirkt heute ein wenig Sprunghaft und impulsiv, da die Gestik des öfteren darauf hinwies. ${name} pendelt öfters zwischen verschiedenen Sitzplätzen hin und her. `,
+    `${name} wirkt heute ein wenig sprunghaft und impulsiv, da die Gestik des öfteren darauf hinwies. ${name} pendelt öfters zwischen verschiedenen Sitzplätzen hin und her. `,
     `Über den ganzen Vormittag vierhielt sich ${name} sehr angetrieben, konnte nicht lange an einem Platz sitzen bleiben und wirkte ein wenig nervös. `,
   ];
   const nervoestext = [
@@ -73,20 +73,20 @@ const Mood = () => {
     `${name} verhielt sich heute allgemein ein wenig sprunghaft und gestikulierte sich nervös. `,
   ];
   const handyeinstellungentext = [
-    `${name} hatte heute Schwierigkeiten mit der Konfiguration des Smartphones. Das Betreuerteam zeigte mögliche Lösungsansätze auf, verwies jedoch ebenfalls auf das Handyverbot. `,
-    `Heute wurde ${name} bei einigen Handyeinstellungen unterstützt, jedoch gleichzeitig vom übermäßigen Konsum abgeraten. `
+    `${name} hatte heute Schwierigkeiten mit der Konfiguration des eigenen Smartphones. Das Betreuerteam zeigte mögliche Lösungsansätze auf, verwies jedoch ebenfalls auf das Handyverbot. `,
+    `Heute wurde ${name} bei einigen Handyeinstellungen beim eigenen Smartphone unterstützt, jedoch wurde gleichzeitig von übermäßigem Konsum abgeraten. `
   ];
   const draussenaufhaltendtext = [
     `${name} hielt sich heute allgemein sehr gerne draußen am Hof auf, nachdem das Betreuerteam entsprechende Kleidung sicherstellte. Vereinzelt kam es auch draußen zur Begegnung mit Personal und Klientel außerhalb der eigenen Gruppe. `,
-    `Diesen Vormittag über hielt sich ${name} gerne immer wieder am Hof auf und hatte dort ebenfalls Kontakt zu anderen Klienten und Betreuern außerhalb der Werkstatt. `,
+    `Diesen Vormittag über hielt sich ${name} immer wieder gerne am Hof auf und hatte dort ebenfalls Kontakt zu anderen Klienten und Betreuern außerhalb der Werkstatt. `,
   ];
   const lauttext = [
-    `${name}'s Unruhe war am Vormittag kaum zu überhören, da ${name} immer wieder laute Schreie und Töne von sich gab, womit periodisch verbal Unwohlsein bekanntgegeben wurde. `,
+    `${name}'s Unruhe am Vormittag war kaum zu überhören, da ${name} immer wieder laute Schreie und Töne von sich gab, womit periodisch verbal Unwohlsein bekanntgegeben wurde. `,
     `Heute lautierte ${name} öfters umher und wirkte dabei sehr angespannt und nervös. Das Betreuerteam setzte daraufhin Maßnahmen zur Beruhigung`,
   ];
   const schwankendegefuehletext = [
-    `${name} fiel heute am Vormittga verstärkt durch Gefühlsschwankungen auf, die die Laune prägten. Allgemein ist festzustellen, dass heute der gemütszustand von ${name} durchaus volatil ist. `,
-    `Am Vormittag wirkt ${name} ein wenig durcheinander. Die Laune von ${name} schien außerdem zu mehrmals zu schwanken. `,
+    `${name} fiel heute am Vormittag verstärkt durch Gefühlsschwankungen auf, die die Laune prägten. Allgemein ist festzustellen, dass heute der Gemütszustand von ${name} durchaus volatil ist. `,
+    `Am Vormittag wirkt ${name} ein wenig durcheinander. Die Laune von ${name} schien außerdem über den Tag verteilt mehrmals zu schwanken. `,
   ];
 
   let disablebutton = true;

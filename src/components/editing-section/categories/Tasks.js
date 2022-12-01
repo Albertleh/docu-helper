@@ -20,14 +20,14 @@ const Tasks = () => {
 
   const makingcoffeetext = [`Bezüglich Tätigkeiten hat ${name} heute die Aufgabe des Kaffeekochens angenommen und auch erfüllt. `, 
                             `Heute kochte ${name} selbstständig eine Kanne Kaffee für die Gruppe. `];
-  const takingouttrashtext = [`Ebenfalls wurde der Müll heute von ${name} selbstständig zum Müllplatz getragen und dort entsorgt. `, 
-                              `Am Nachmittag wurde der Müll von ${name} rausgetragen und dort entsorgt. `];
+  const takingouttrashtext = [`Ebenfalls wurde der Müll heute von ${name} selbstständig zum Müllplatz getragen und auch dort entsorgt. `, 
+                              `Am Nachmittag wurde der Müll von ${name} rausgetragen und auch dort entsorgt. `];
   const cleaningtext = [`${name} war heute sehr um die Sauberkeit der Gruppe bemüht und nahm selbstbestimmt diverse Reinungstätigkeiten an. `, 
                         `Heute hat sich ${name} um anfallende Reinigungsarbeiten gekümmert und diese in Abstimmung mit dem Betreuerteam erledigt. `,];
-  const participatingtext = [`Außerdem ist zu betonen, dass ${name} heute sich aktiv in das Gruppengeschehen eingebracht hat. `, 
-                             `${name} hat das Gruppengeschehen beobachtet und sich eingebracht. `,
+  const participatingtext = [`Außerdem ist zu betonen, dass sich ${name} heute aktiv in das Gruppengeschehen eingebracht hat. `, 
+                             `${name} hat das Gruppengeschehen beobachtet und sich auch eingebracht. `,
                              `Heute hat ${name} aktiv am Gruppengeschehen teilgenommen und mit anderen Personen interagiert. `,];
-  const carrytext = [`Ebenfalls erledigte ${name} am Vormittag diverse Botengänge in die Küche. `, 
+  const carrytext = [`Ebenfalls erledigte ${name} am Vormittag diverse Botengänge. `, 
                      `Heute verrichtete ${name} nach Aufforderung durch das Betreuerteam einige Botengänge. `,];
   const carryluchboxtext = [`${name} hat heute Früh die leere Jausenbox zurück in die Küche gebracht. `, 
                            `Heute brachte ${name} die Jausenbox nach dem Frühstück in die Küche zurück. `,];
