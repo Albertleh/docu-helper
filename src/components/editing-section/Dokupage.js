@@ -17,7 +17,7 @@ const Dokupage = () => {
       <div className="card-inner">
         <Mood />
       </div>
-      <div className="card-inner mb-3">
+      <div className="card-inner">
         <Measures />
       </div>
       <div className="card-inner mb-3">

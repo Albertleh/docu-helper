@@ -10,6 +10,7 @@ import mirror from "../../../assets/mirror.png";
 import smoking from "../../../assets/smoking.png";
 import door from "../../../assets/door.png";
 import paint from "../../../assets/paint.png";
+import laundry from "../../../assets/laundry.png";
 
 import { moodTextContext, nameContext } from "../../../Helpers/Context";
 import ButtonElement from "../ButtonElement";
@@ -39,6 +40,8 @@ const Tasks = () => {
                         `${name} betätigt sich für einige Zeit des Vormittags künstlerisch. `]
   const smokingtext = [`Ebenfalls nennenswert ist, dass ${name} heute einige Zeit mit Rauchen verbrachte. `, 
                        `${name} beschäftigte sich außerdem in einigen Pausenzeiten mit dem Rauchen. `, ]
+  const laundrytext = [`${name} befüllte die Waschmaschine selbstständig mit Wäsche und Waschpulver. `, 
+                       `Die Waschmaschine wurde heute von ${name} mit Wäsche und Waschpulver befüllt. `, ]
 
   let disablebutton = true;
   if ( name.length === 0 ) {
@@ -58,6 +61,7 @@ const Tasks = () => {
     ["Türdienst", door],
     ["Rauchen", smoking],
     ["künstlerische Tätigkeit", paint],
+    ["Waschmaschine", laundry],
   ];
 
   const selectMoodHandler = (text) => {
@@ -81,7 +85,9 @@ const Tasks = () => {
       setMoodText([moodText + smokingtext[Math.floor(Math.random() * smokingtext.length)]]);
     } else if (text === ITEMS[9][0]) {
       setMoodText([ moodText + artistictext[Math.floor(Math.random() * artistictext.length)]]);
-    } else {
+    } else if (text === ITEMS[10][0]) {
+      setMoodText([ moodText + laundrytext[Math.floor(Math.random() * laundrytext.length)]]);
+    }else {
       alert('error text doesnt match!');
     }
   };
@@ -100,7 +106,7 @@ const Tasks = () => {
 
   return (
     <React.Fragment>
-      <div className="mood-text text-slate-300 font-bold text-2xl">
+      <div className="mood-header-text">
         Aufgaben
       </div>
       <div className="m-3 grid lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8">

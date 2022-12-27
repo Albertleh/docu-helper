@@ -89,7 +89,7 @@ const Measures = () => {
 
   return (
     <React.Fragment>
-      <div className=" mood-text text-slate-300 font-bold text-2xl mb-2">
+      <div className="mood-header-text">
         Pädagogische Maßnahmen
       </div>
       <div className="m-3 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
